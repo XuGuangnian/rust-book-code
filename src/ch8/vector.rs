@@ -29,7 +29,8 @@ pub fn read_element() {
     let third: &i32 = &v[2]; // &v[2] is a reference to the third element of v
     println!("The third element is {}", third);
 
-    match v.get(2) { // v.get(2) is an Option<&i32>
+    match v.get(2) {
+        // v.get(2) is an Option<&i32>
         Some(third) => println!("The third element is {}", third),
         None => println!("There is no third element."),
     }
@@ -82,4 +83,3 @@ pub fn store_multiple_types_by_enum() {
 
     println!("{:?}", row);
 }
-

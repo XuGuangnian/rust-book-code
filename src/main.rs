@@ -1,10 +1,30 @@
-#![allow(unused_variables)]
+#![allow(unused)]
 
 mod ch8;
 
+use crate::ch8::string;
 use crate::ch8::vector;
 
 fn main() {
+    // ch8_vector();
+
+    string::create();
+
+    string::update();
+
+    string::combine_two_strings();
+
+    string::combine_multiple_strings();
+
+    string::not_indexed();
+
+    string::slice();
+
+    string::iterate();
+
+}
+
+fn ch8_vector() {
     vector::create();
 
     vector::update();
