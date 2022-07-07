@@ -4,10 +4,26 @@ mod ch8;
 
 use crate::ch8::string;
 use crate::ch8::vector;
+use crate::ch8::hashmap;
 
 fn main() {
     // ch8_vector();
 
+    // ch8_string();
+
+    hashmap::create();
+
+    hashmap::ownership();
+
+    hashmap::access_values();
+
+    hashmap::iterate();
+
+    hashmap::update();
+
+}
+
+fn ch8_string() {
     string::create();
 
     string::update();
@@ -21,7 +37,6 @@ fn main() {
     string::slice();
 
     string::iterate();
-
 }
 
 fn ch8_vector() {
