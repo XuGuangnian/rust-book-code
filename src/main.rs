@@ -5,12 +5,27 @@ mod ch8;
 use crate::ch8::string;
 use crate::ch8::vector;
 use crate::ch8::hashmap;
+use crate::ch8::exercise;
 
 fn main() {
     // ch8_vector();
 
     // ch8_string();
 
+    // ch8_hashmap();
+
+    ch8_exercises();
+}
+
+fn ch8_exercises() {
+    exercise::one();
+
+    exercise::two();
+
+    exercise::three();
+}
+
+fn ch8_hashmap() {
     hashmap::create();
 
     hashmap::ownership();
@@ -20,7 +35,6 @@ fn main() {
     hashmap::iterate();
 
     hashmap::update();
-
 }
 
 fn ch8_string() {

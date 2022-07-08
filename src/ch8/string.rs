@@ -69,7 +69,7 @@ pub fn not_indexed() {
 }
 
 pub fn slice() {
-    let hello = "Здравствуйте";;
+    let hello = "Здравствуйте";
     let s = &hello[0..4];
     
     // let s = &hello[0..1];
