@@ -18,7 +18,7 @@ https://doc.rust-lang.org/stable/book/,
 If you want to use the code in Chapter 7, switch to the `chapter7` branch
 
 ```bash
-git checkout -b chapter7
+git checkout chapter7
 ```
 
 
