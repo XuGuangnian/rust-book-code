@@ -1,17 +1,19 @@
 #![allow(unused)]
 
-mod ch8;
 mod ch1;
 mod ch2;
+mod ch3;
+mod ch8;
 
+use crate::ch8::exercise;
+use crate::ch8::hashmap;
 use crate::ch8::string;
 use crate::ch8::vector;
-use crate::ch8::hashmap;
-use crate::ch8::exercise;
 
 fn main() {
-    ch1();
-    ch2();
+    // ch1();
+    // ch2();
+    ch3();
     // ch8();
 }
 
@@ -23,6 +25,11 @@ pub fn ch2() {
     ch2::game();
 }
 
+pub fn ch3() {
+    ch3::variables();
+    ch3::data_type();
+}
+
 pub fn ch8() {
     ch8::vector();
 
@@ -32,5 +39,3 @@ pub fn ch8() {
 
     ch8::exercises();
 }
-
-
