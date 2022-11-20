@@ -28,6 +28,8 @@ pub fn ch2() {
 pub fn ch3() {
     ch3::variables();
     ch3::data_type();
+    ch3::func();
+    ch3::comments();
 }
 
 pub fn ch8() {
