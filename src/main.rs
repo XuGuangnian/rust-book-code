@@ -3,6 +3,7 @@
 mod ch1;
 mod ch2;
 mod ch3;
+mod ch4;
 mod ch8;
 
 use crate::ch8::exercise;
@@ -13,7 +14,8 @@ use crate::ch8::vector;
 fn main() {
     // ch1();
     // ch2();
-    ch3();
+    // ch3();
+    ch4();
     // ch8();
 }
 
@@ -32,6 +34,12 @@ pub fn ch3() {
     ch3::comments();
     ch3::branches();
     ch3::exercises();
+}
+
+fn ch4() {
+    ch4::ownership();
+    ch4::references();
+    ch4::slice_type();
 }
 
 pub fn ch8() {
