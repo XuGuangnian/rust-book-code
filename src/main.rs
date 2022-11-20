@@ -30,6 +30,8 @@ pub fn ch3() {
     ch3::data_type();
     ch3::func();
     ch3::comments();
+    ch3::branches();
+    ch3::exercises();
 }
 
 pub fn ch8() {

@@ -1,6 +1,8 @@
-pub mod data_type;
-pub mod func;
-pub mod variables;
+mod branches;
+mod data_type;
+mod exercises;
+mod func;
+mod variables;
 
 pub(crate) fn variables() {
     variables::immut_variables();
@@ -31,4 +33,18 @@ pub(crate) fn func() {
 pub(crate) fn comments() {
     // I’m feeling lucky today
     let lucky_number = 7;
+}
+
+pub(crate) fn branches() {
+    branches::if_else();
+    branches::loop_func();
+    branches::loop_label();
+    branches::while_func();
+    branches::for_element();
+}
+
+pub(crate) fn exercises() {
+    exercises::temperature_convert();
+    exercises::fibonacci();
+    exercises::print_lyrics();
 }
