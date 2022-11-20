@@ -10,7 +10,7 @@ use crate::ch8::hashmap;
 use crate::ch8::exercise;
 
 fn main() {
-    // ch1();
+    ch1();
     ch2();
     // ch8();
 }

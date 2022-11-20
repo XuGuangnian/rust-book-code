@@ -15,10 +15,10 @@ https://doc.rust-lang.org/stable/book/,
 
 ## Usage
 
-If you want to use the code in Chapter 7, switch to the `chapter7` branch
+If you want to use the code in Chapter 7, switch to the `ch7` branch
 
 ```bash
-git checkout chapter7
+git checkout ch7
 ```
 
 
