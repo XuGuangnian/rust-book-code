@@ -77,7 +77,7 @@ pub(crate) fn array() {
 
     let a = [1, 2, 3, 4, 5];
 
-    array_out_of_index();
+    // array_out_of_index();
 }
 
 fn array_out_of_index() {
