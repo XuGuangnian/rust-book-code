@@ -1,6 +1,7 @@
 #![allow(unused)]
 
 mod ch8;
+mod ch1;
 
 use crate::ch8::string;
 use crate::ch8::vector;
@@ -8,7 +9,12 @@ use crate::ch8::hashmap;
 use crate::ch8::exercise;
 
 fn main() {
-    ch8();
+    ch1();
+    // ch8();
+}
+
+pub fn ch1() {
+    ch1::hello();
 }
 
 pub fn ch8() {
