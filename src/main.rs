@@ -5,6 +5,7 @@ mod ch2;
 mod ch3;
 mod ch4;
 mod ch5;
+mod ch6;
 mod ch8;
 
 use crate::ch8::exercise;
@@ -13,11 +14,7 @@ use crate::ch8::string;
 use crate::ch8::vector;
 
 fn main() {
-    ch1();
-    ch2();
-    ch3();
-    ch4();
-    ch5();
+    ch6();
 }
 
 pub fn ch1() {
@@ -47,6 +44,12 @@ fn ch5() {
     ch5::structure();
     ch5::example_structs();
     ch5::method_syntax();
+}
+
+fn ch6() {
+    ch6::enumerate();
+    ch6::match_control_flow();
+    ch6::if_let();
 }
 
 pub fn ch8() {
