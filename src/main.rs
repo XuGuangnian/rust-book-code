@@ -13,6 +13,10 @@ use crate::ch8::string;
 use crate::ch8::vector;
 
 fn main() {
+    ch1();
+    ch2();
+    ch3();
+    ch4();
     ch5();
 }
 
