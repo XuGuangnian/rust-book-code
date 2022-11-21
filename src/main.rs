@@ -23,6 +23,8 @@ fn main() {
 
 fn ch5() {
     ch5::structure();
+    ch5::example_structs();
+    ch5::method_syntax();
 }
 
 pub fn ch1() {
