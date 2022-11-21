@@ -13,18 +13,7 @@ use crate::ch8::string;
 use crate::ch8::vector;
 
 fn main() {
-    // ch1();
-    // ch2();
-    // ch3();
-    // ch4();
     ch5();
-    // ch8();
-}
-
-fn ch5() {
-    ch5::structure();
-    ch5::example_structs();
-    ch5::method_syntax();
 }
 
 pub fn ch1() {
@@ -48,6 +37,12 @@ fn ch4() {
     ch4::ownership();
     ch4::references();
     ch4::slice_type();
+}
+
+fn ch5() {
+    ch5::structure();
+    ch5::example_structs();
+    ch5::method_syntax();
 }
 
 pub fn ch8() {
