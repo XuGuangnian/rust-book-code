@@ -8,11 +8,6 @@ mod ch5;
 mod ch6;
 mod ch8;
 
-use crate::ch8::exercise;
-use crate::ch8::hashmap;
-use crate::ch8::string;
-use crate::ch8::vector;
-
 fn main() {
     // ch1();
     // ch2();
