@@ -53,9 +53,12 @@ pub fn combine_multiple_strings() {
 
     // let s = s1 + "-" + &s2 + "-" + &s3; // too complicated
 
-    let s = format!("{}-{}-{}", s1, s2, s3);
+    let s = format!("{}-{}-{}", s1, s2, s3); // get reference
 
     println!("{}", s);
+    println!("{}", s1);
+    println!("{}", s2);
+    println!("{}", s3);
 }
 
 pub fn not_indexed() {
@@ -65,13 +68,12 @@ pub fn not_indexed() {
     let len = String::from("hllo").len();
     let len = String::from("Здравствуйте").len();
     println!("{}", len);
-
 }
 
 pub fn slice() {
     let hello = "Здравствуйте";
     let s = &hello[0..4];
-    
+
     // let s = &hello[0..1];
 
     // println!("{}", s); // 乱码
