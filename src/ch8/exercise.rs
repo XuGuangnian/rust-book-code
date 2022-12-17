@@ -64,10 +64,12 @@ pub(crate) fn three() {
     let employee = str_vec[1];
     let department = str_vec[3];
     let mut department_map: HashMap<&str, Vec<&str>> = HashMap::new();
-    department_map.entry(department).or_insert(vec![]).push(employee);
+    department_map
+        .entry(department)
+        .or_insert(vec![])
+        .push(employee);
     println!("{:?}", department_map);
 
     let employees = department_map.get("Engineering").unwrap();
     println!("{:?}", employees);
 }
-

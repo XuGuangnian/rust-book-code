@@ -1,7 +1,7 @@
+pub mod exercise;
+pub mod hashmap;
 pub mod string;
 pub mod vector;
-pub mod hashmap;
-pub mod exercise;
 
 pub fn exercises() {
     exercise::one();

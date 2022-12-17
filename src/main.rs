@@ -7,6 +7,7 @@ mod ch4;
 mod ch5;
 mod ch6;
 mod ch8;
+mod ch9;
 
 fn main() {
     // ch1();
@@ -16,7 +17,8 @@ fn main() {
     // ch5();
     // ch6();
 
-    ch8();
+    // ch8();
+    ch9();
 }
 
 pub fn ch1() {
@@ -62,4 +64,10 @@ pub fn ch8() {
     ch8::hashmap();
 
     ch8::exercises();
+}
+
+pub fn ch9() {
+    ch9::panic();
+
+    ch9::result();
 }

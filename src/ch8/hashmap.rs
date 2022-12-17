@@ -68,6 +68,4 @@ pub(crate) fn update() {
     }
 
     println!("{:?}", map);
-
 }
-
