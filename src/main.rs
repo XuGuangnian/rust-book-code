@@ -70,4 +70,6 @@ pub fn ch9() {
     ch9::panic();
 
     ch9::result();
+
+    ch9::panic_or_not();
 }
