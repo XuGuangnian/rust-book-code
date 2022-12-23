@@ -1,5 +1,3 @@
-use std::fmt::Display;
-
 pub trait Summary {
     fn summarize_author(&self) -> String;
 
@@ -40,4 +38,12 @@ impl Summary for Tweet {
     fn summarize(&self) -> String {
         format!("{}: {}", self.username, self.content)
     }
+}
+
+pub fn add_two(a: i32) -> i32 {
+    internal_adder(a, 2)
+}
+
+fn internal_adder(a: i32, b: i32) -> i32 {
+    a + b
 }
