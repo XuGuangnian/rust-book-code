@@ -1,6 +1,7 @@
 #![allow(unused)]
 
 mod ch1;
+mod ch10;
 mod ch2;
 mod ch3;
 mod ch4;
@@ -18,7 +19,8 @@ fn main() {
     // ch6();
 
     // ch8();
-    ch9();
+    // ch9();
+    ch10();
 }
 
 pub fn ch1() {
@@ -70,4 +72,12 @@ pub fn ch9() {
     ch9::panic();
 
     ch9::result();
+}
+
+pub fn ch10() {
+    ch10::generics();
+
+    ch10::traits();
+
+    ch10::lifetimes();
 }
