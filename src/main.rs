@@ -3,6 +3,7 @@
 mod ch1;
 mod ch10;
 mod ch11;
+mod ch13;
 mod ch2;
 mod ch3;
 mod ch4;
@@ -22,7 +23,8 @@ fn main() {
     // ch8();
     // ch9();
     // ch10();
-    ch11();
+
+    ch13();
 }
 
 pub fn ch1() {
@@ -84,4 +86,6 @@ pub fn ch10() {
     ch10::lifetimes();
 }
 
-pub fn ch11() {}
+pub fn ch13() {
+    ch13::closures();
+}
