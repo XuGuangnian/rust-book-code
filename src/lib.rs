@@ -1,3 +1,8 @@
+//! # Rust Book Code
+//!
+//! `rust_book_code` is a collection of utilities to make performing certain
+//! calculations more convenient.
+
 pub trait Summary {
     fn summarize_author(&self) -> String;
 
@@ -54,6 +59,7 @@ struct Shoe {
     style: String,
 }
 
+#[allow(unused)]
 fn shoes_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
     shoes.into_iter().filter(|s| s.size == shoe_size).collect()
 }
@@ -63,6 +69,7 @@ struct Counter {
 }
 
 impl Counter {
+    #[allow(unused)]
     fn new() -> Counter {
         Counter { count: 0 }
     }
@@ -78,6 +85,51 @@ impl Iterator for Counter {
         } else {
             None
         }
+    }
+}
+
+/// Adds one to the number given.
+///
+/// # Examples
+///
+/// ```
+/// use rust_book_code::add_one;
+/// let arg = 5;
+/// let answer = rust_book_code::add_one(arg);
+///
+/// assert_eq!(6, answer);
+/// ```
+pub fn add_one(x: i32) -> i32 {
+    x + 1
+}
+
+pub use self::kinds::PrimaryColor;
+pub use self::kinds::SecondaryColor;
+pub use self::utils::mix;
+
+pub mod kinds {
+    /// The primary colors according to the RYB color model.
+    pub enum PrimaryColor {
+        Red,
+        Yellow,
+        Blue,
+    }
+
+    /// The secondary colors according to the RYB color model.
+    pub enum SecondaryColor {
+        Orange,
+        Green,
+        Purple,
+    }
+}
+
+pub mod utils {
+    use crate::kinds::*;
+
+    /// Combines two primary colors in equal amounts to create
+    /// a secondary color.
+    pub fn mix(_c1: PrimaryColor, _c2: PrimaryColor) -> SecondaryColor {
+        SecondaryColor::Orange
     }
 }
 
