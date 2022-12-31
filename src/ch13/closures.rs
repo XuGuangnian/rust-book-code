@@ -72,6 +72,7 @@ mod tests {
     use super::*;
 
     #[test]
+    #[ignore]
     fn call_with_different_values() {
         let mut c = Cacher::new(|a| a);
 

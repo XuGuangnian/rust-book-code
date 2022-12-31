@@ -88,4 +88,6 @@ pub fn ch10() {
 
 pub fn ch13() {
     ch13::closures();
+
+    ch13::iterators();
 }
