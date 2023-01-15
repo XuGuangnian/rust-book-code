@@ -6,6 +6,7 @@ mod ch11;
 mod ch13;
 mod ch14;
 mod ch15;
+mod ch16;
 mod ch2;
 mod ch3;
 mod ch4;
@@ -28,7 +29,8 @@ fn main() {
 
     // ch13();
     // ch14: https://doc.rust-lang.org/cargo/
-    ch15();
+    // ch15();
+    ch16();
 }
 
 pub fn ch1() {
@@ -104,4 +106,8 @@ pub fn ch14() {
 
 pub fn ch15() {
     ch15::smart_pointer();
+}
+
+pub fn ch16() {
+    ch16::concurrency();
 }
