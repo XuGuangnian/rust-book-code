@@ -1,12 +1,20 @@
 #![allow(unused)]
 
 mod ch1;
+mod ch10;
+mod ch11;
+mod ch13;
+mod ch14;
+mod ch15;
+mod ch16;
+mod ch17;
 mod ch2;
 mod ch3;
 mod ch4;
 mod ch5;
 mod ch6;
 mod ch8;
+mod ch9;
 
 fn main() {
     // ch1();
@@ -16,7 +24,15 @@ fn main() {
     // ch5();
     // ch6();
 
-    ch8();
+    // ch8();
+    // ch9();
+    // ch10();
+
+    // ch13();
+    // ch14: https://doc.rust-lang.org/cargo/
+    // ch15();
+    // ch16();
+    ch17();
 }
 
 pub fn ch1() {
@@ -62,4 +78,42 @@ pub fn ch8() {
     ch8::hashmap();
 
     ch8::exercises();
+}
+
+pub fn ch9() {
+    ch9::panic();
+
+    ch9::result();
+}
+
+pub fn ch10() {
+    ch10::generics();
+
+    ch10::traits();
+
+    ch10::lifetimes();
+}
+
+pub fn ch13() {
+    ch13::closures();
+
+    ch13::iterators();
+}
+
+pub fn ch14() {
+    ch14::crates();
+
+    // cargo workspace: https://github.com/XuGuangnian/add
+}
+
+pub fn ch15() {
+    ch15::smart_pointer();
+}
+
+pub fn ch16() {
+    ch16::concurrency();
+}
+
+pub fn ch17() {
+    ch17::oop();
 }
