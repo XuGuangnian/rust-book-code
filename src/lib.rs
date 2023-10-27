@@ -106,7 +106,6 @@ pub fn add_one(x: i32) -> i32 {
 pub use self::kinds::PrimaryColor;
 pub use self::kinds::SecondaryColor;
 pub use self::utils::mix;
-use std::path::Components;
 
 pub mod kinds {
     /// The primary colors according to the RYB color model.

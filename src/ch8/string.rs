@@ -19,7 +19,7 @@ pub fn create() {
     let hello = String::from("こんにちは");
     let hello = String::from("안녕하세요");
     let hello = String::from("你好");
-    println!("{:?}", hello); // 乱码
+    println!("{:?}", hello);
     let hello = String::from("Olá");
     let hello = String::from("Здравствуйте");
     let hello = String::from("Hola");
@@ -41,9 +41,9 @@ pub fn update() {
 pub fn combine_two_strings() {
     let s1 = String::from("Hello, ");
     let s2 = String::from("world!");
-    let s3 = s1 + &s2;
+    let s3 = s1 + &s2; // s1 moved
 
-    println!("{}", s3);
+    println!("{}-{}", s2, s3);
 }
 
 pub fn combine_multiple_strings() {
@@ -66,21 +66,32 @@ pub fn not_indexed() {
     // let h = s1[0];
 
     let len = String::from("hllo").len();
+    println!("{}", len);
     let len = String::from("Здравствуйте").len();
+    println!("{}", len);
+    let len = String::from("你好").len();
     println!("{}", len);
 }
 
 pub fn slice() {
     let hello = "Здравствуйте";
-    let s = &hello[0..4];
+    let s = &hello[0..4]; // yes
+                          // let s = &hello[0]; // no
+                          // let s = &hello[0..1]; // no
 
-    // let s = &hello[0..1];
-
-    // println!("{}", s); // 乱码
+    let hello = "你好";
+    let s = &hello[0..3]; // yes
+                          // let s = &hello[0]; // no
+                          // let s = &hello[0..2]; // no
+    println!("{}", s);
 }
 
 pub fn iterate() {
-    for c in "नमस्ते".chars() {
-        println!("{}", c); // 乱码???
+    for c in "Зд".chars() {
+        println!("{c}");
+    }
+
+    for b in "Зд".bytes() {
+        println!("{b}");
     }
 }

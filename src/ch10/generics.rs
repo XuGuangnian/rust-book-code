@@ -1,4 +1,4 @@
-pub(crate) fn extract_functions() {
+pub fn extract_functions() {
     // Variable names cannot be the same as method names
     let number_list = vec![34, 50, 25, 100, 65];
     let result = largest_i32(&number_list);
@@ -9,7 +9,7 @@ pub(crate) fn extract_functions() {
     println!("The largest number is {}", result);
 }
 
-pub(crate) fn generics_function() {
+pub fn generics_function() {
     let number_list = vec![34, 50, 25, 100, 65];
 
     let result = largest(&number_list);
@@ -74,14 +74,14 @@ impl Point<f32> {
     }
 }
 
-pub(crate) fn generics_struct() {
+pub fn generics_struct() {
     let integer = Point { x: 5, y: 10 };
     let float = Point { x: 1.0, y: 4.0 };
 
     println!("p.x = {}", integer.x);
 }
 
-pub(crate) fn generics_enum() {
+pub fn generics_enum() {
     enum Option<T> {
         Some(T),
         None,

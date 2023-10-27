@@ -1,7 +1,7 @@
 use crate::ch9::result;
 use std::fmt::Display;
 
-pub(crate) fn lifetimes_syntax() {
+pub fn lifetimes_syntax() {
     let string1 = String::from("abcd");
     let string2 = "xyz";
 
@@ -46,7 +46,7 @@ impl<'a> ImportantExcerpt<'a> {
     }
 }
 
-pub(crate) fn lifetimes_struct() {
+pub fn lifetimes_struct() {
     let novel = String::from("Call me Ishmael. Some years ago...");
     let first_sentence = novel.split('.').next().expect("Could not find a '.'");
     let i = ImportantExcerpt {
@@ -60,12 +60,12 @@ pub(crate) fn lifetimes_struct() {
     println!("{}", part);
 }
 
-pub(crate) fn lifetimes_static() {
+pub fn lifetimes_static() {
     let s: &'static str = "I have a static lifetime.";
     println!("{}", s);
 }
 
-pub(crate) fn combination() {
+pub fn combination() {
     fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str
     where
         T: Display,

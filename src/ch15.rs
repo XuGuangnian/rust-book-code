@@ -3,7 +3,7 @@ mod reference_counting;
 mod reference_cycles;
 mod smart_pointer;
 
-pub(crate) fn smart_pointer() {
+pub fn smart_pointer() {
     smart_pointer::heap_box();
     smart_pointer::cons_list();
 

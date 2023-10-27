@@ -40,7 +40,7 @@ pub fn read_element() {
 // 它会创建一个新的 vector，并将旧 vector 的元素复制到新 vector 中。
 // 这时，第一个元素的引用就指向的被释放的内存。这是不被允许的。
 pub fn vector_work_type() {
-    let v = vec![1, 2, 3, 4, 5];
+    let mut v = vec![1, 2, 3, 4, 5];
 
     let first = &v[0]; // immutable borrow occurs here
 
@@ -55,6 +55,12 @@ pub fn iterate() {
     for i in &v {
         println!("{}", i);
     }
+
+    for i in v {
+        // - `v` moved due to this implicit call to `.into_iter()`
+        println!("{}", i);
+    }
+    // println!("{:?}", v);
 }
 
 pub fn iterate_mut() {

@@ -13,7 +13,7 @@ impl Draw for SelectBox {
     }
 }
 
-pub(crate) fn inherit_like() {
+pub fn inherit_like() {
     let screen = Screen {
         components: vec![
             Box::new(SelectBox {

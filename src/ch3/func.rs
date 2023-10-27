@@ -1,4 +1,4 @@
-pub(crate) fn func_example() {
+pub fn func_example() {
     println!("Hello, world!");
 
     another_function();
@@ -8,19 +8,19 @@ fn another_function() {
     println!("Another function.");
 }
 
-pub(crate) fn func_param(x: i32) {
+pub fn func_param(x: i32) {
     println!("The value of x is: {x}");
 }
 
-pub(crate) fn print_labeled_measurement(value: i32, unit_label: char) {
+pub fn print_labeled_measurement(value: i32, unit_label: char) {
     println!("The measurement is: {}{}", value, unit_label);
 }
 
-pub(crate) fn statement() {
+pub fn statement() {
     let y = 6;
 }
 
-pub(crate) fn expression() {
+pub fn expression() {
     let y = {
         let x = 3;
         x + 1
@@ -29,7 +29,7 @@ pub(crate) fn expression() {
     println!("The value of y is: {y}");
 }
 
-pub(crate) fn return_value() {
+pub fn return_value() {
     let x = five();
 
     println!("The value of x is: {x}");

@@ -4,7 +4,7 @@ use std::cell::RefCell;
 use std::ops::Deref;
 use std::rc::Rc;
 
-pub(crate) fn heap_box() {
+pub fn heap_box() {
     let b = Box::new(5);
     println!("b = {}", b);
 }
@@ -14,7 +14,7 @@ enum List {
     Nil,
 }
 
-pub(crate) fn cons_list() {
+pub fn cons_list() {
     let list = Cons(1, Box::new(Cons(2, Box::new(Cons(3, Box::new(Nil))))));
 }
 
@@ -42,7 +42,7 @@ fn hello_string(name: &String) {
     println!("Hello, {}!", name);
 }
 
-pub(crate) fn deref() {
+pub fn deref() {
     let x = 5;
     let y = MyBox::new(x);
     assert_eq!(5, x);
@@ -63,7 +63,7 @@ impl Drop for CustomSmartPointer {
     }
 }
 
-pub(crate) fn drop_trait() {
+pub fn drop_trait() {
     let c = CustomSmartPointer {
         data: String::from("my stuff"),
     };
@@ -73,7 +73,7 @@ pub(crate) fn drop_trait() {
     println!("CustomSmartPointers created.");
 }
 
-pub(crate) fn std_mem_drop() {
+pub fn std_mem_drop() {
     let c = CustomSmartPointer {
         data: String::from("some data"),
     };
@@ -87,7 +87,7 @@ enum RcList {
     RcNil,
 }
 
-pub(crate) fn reference_counting() {
+pub fn reference_counting() {
     let a = Rc::new(RcCons(5, Rc::new(RcCons(10, Rc::new(RcNil)))));
     println!("count after creating a = {}", Rc::strong_count(&a));
     let b = RcCons(3, Rc::clone(&a));

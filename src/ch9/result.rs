@@ -3,7 +3,7 @@ use std::fs::File;
 use std::io::{ErrorKind, Read};
 use std::{fs, io};
 
-pub(crate) fn open_file() {
+pub fn open_file() {
     let f = File::open("hello.txt");
 
     let f = match f {
@@ -12,7 +12,7 @@ pub(crate) fn open_file() {
     };
 }
 
-pub(crate) fn recoverable_errors() {
+pub fn recoverable_errors() {
     let f = File::open("hello.txt");
 
     let f = match f {
@@ -27,7 +27,7 @@ pub(crate) fn recoverable_errors() {
     };
 }
 
-pub(crate) fn unwrap_or_else() {
+pub fn unwrap_or_else() {
     let f = File::open("hello.txt").unwrap_or_else(|error| {
         if error.kind() == ErrorKind::NotFound {
             File::create("hello.txt").unwrap_or_else(|error| {
@@ -39,13 +39,13 @@ pub(crate) fn unwrap_or_else() {
     });
 }
 
-pub(crate) fn unwrap_and_expect() {
+pub fn unwrap_and_expect() {
     // let f = File::open("hello.txt").unwrap();
 
     let f = File::open("hello.txt").expect("Failed to open hello.txt");
 }
 
-pub(crate) fn propagate_errors() {
+pub fn propagate_errors() {
     let result = match read_username_from_file() {
         Ok(s) => s,
         Err(err) => panic!("failed to read username"),
@@ -70,7 +70,7 @@ pub(crate) fn propagate_errors() {
     }
 }
 
-pub(crate) fn propagate_errors_shortcut() {
+pub fn propagate_errors_shortcut() {
     let result = match read_username_from_file() {
         Ok(s) => s,
         Err(err) => panic!("failed to read username"),
@@ -85,7 +85,8 @@ pub(crate) fn propagate_errors_shortcut() {
         Ok(username)
     }
 }
-pub(crate) fn shortcut_chains() {
+
+pub fn shortcut_chains() {
     let result = match read_username_from_file() {
         Ok(s) => s,
         Err(err) => panic!("failed to read username"),
@@ -100,7 +101,7 @@ pub(crate) fn shortcut_chains() {
     }
 }
 
-pub(crate) fn read_to_string() {
+pub fn read_to_string() {
     let result = match read_username_from_file() {
         Ok(s) => s,
         Err(err) => panic!("failed to read username"),
@@ -113,7 +114,7 @@ pub(crate) fn read_to_string() {
     }
 }
 
-pub(crate) fn last_char() {
+pub fn last_char() {
     assert_eq!(
         last_char_of_first_line("Hello, world\nHow are you today?"),
         Some('d')

@@ -25,7 +25,7 @@ impl Rectangle {
     }
 }
 
-pub(crate) fn impl_area() {
+pub fn impl_area() {
     let rect1 = Rectangle {
         width: 30,
         height: 50,
@@ -41,7 +41,7 @@ pub(crate) fn impl_area() {
     }
 }
 
-pub(crate) fn reference_and_dereference() {
+pub fn reference_and_dereference() {
     #[derive(Debug, Copy, Clone)]
     struct Point {
         x: f64,
@@ -66,7 +66,7 @@ pub(crate) fn reference_and_dereference() {
     println!("distance is {}", distance);
 }
 
-pub(crate) fn can_hold() {
+pub fn can_hold() {
     let rect1 = Rectangle {
         width: 30,
         height: 50,
@@ -84,7 +84,7 @@ pub(crate) fn can_hold() {
     println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
 }
 
-pub(crate) fn associated_functions() {
+pub fn associated_functions() {
     let sq = Rectangle::square(3);
 }
 

@@ -1,4 +1,4 @@
-pub(crate) fn first_word_func() {
+pub fn first_word_func() {
     let mut s = String::from("hello world");
     let word = first_word_no_slice(&s); // word 的值为 5
     s.clear(); // 这清空了字符串，使其等于 ""
@@ -19,7 +19,7 @@ fn first_word_no_slice(s: &String) -> usize {
     s.len()
 }
 
-pub(crate) fn slices() {
+pub fn slices() {
     let s = String::from("hello world");
     let hello = &s[0..5];
     println!("hello: {}", hello);
@@ -47,7 +47,7 @@ pub(crate) fn slices() {
     println!("slice: {}", slice);
 }
 
-pub(crate) fn first_word_slice() {
+pub fn first_word_slice() {
     let mut s = String::from("hello world");
     let word = first_word(&s); // word 的值为 5
 
@@ -74,7 +74,7 @@ pub(crate) fn first_word_slice() {
     let word = first_word(my_string_literal);
 }
 
-pub(crate) fn first_word(s: &str) -> &str {
+pub fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
@@ -86,7 +86,7 @@ pub(crate) fn first_word(s: &str) -> &str {
     &s[..]
 }
 
-pub(crate) fn array_slices() {
+pub fn array_slices() {
     let a = [1, 2, 3, 4, 5];
 
     let slice = &a[1..3];

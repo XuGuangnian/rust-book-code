@@ -1,20 +1,20 @@
 use std::io;
 
-pub(crate) fn integer() {
+pub fn integer() {
     let x: i16 = 10;
     let y = 20;
     let z: isize = 30;
     println!("The integer value of x, y, z is {x}, {y}, {z}");
 }
 
-pub(crate) fn float() {
+pub fn float() {
     let x = 2.0; // f64
 
     let y: f32 = 3.0; // f32
     println!("The float value of x, y is {x}, {y}");
 }
 
-pub(crate) fn calc() {
+pub fn calc() {
     // addition
     let sum = 5 + 10;
     println!("The value of sum is {sum}");
@@ -39,21 +39,21 @@ pub(crate) fn calc() {
     println!("The value of remainder is {remainder}");
 }
 
-pub(crate) fn bool() {
+pub fn bool() {
     let t = true;
 
     let f: bool = false; // with explicit type annotation
     println!("bool: {t}, {f}");
 }
 
-pub(crate) fn char() {
+pub fn char() {
     let c = 'z';
     let z: char = 'ℤ'; // with explicit type annotation
     let heart_eyed_cat = '😻';
     println!("char: {}, {}, {}", c, z, heart_eyed_cat);
 }
 
-pub(crate) fn tuple() {
+pub fn tuple() {
     let tup: (i32, f64, u8) = (500, 6.4, 1);
     let (x, y, z) = tup;
     println!("The value of y is: {y}");
@@ -64,7 +64,7 @@ pub(crate) fn tuple() {
     println!("{}, {}, {}", five_hundred, six_point_four, one);
 }
 
-pub(crate) fn array() {
+pub fn array() {
     let a = [1, 2, 3, 4, 5];
     let b: [i32; 5] = [1, 2, 3, 4, 5];
     let c = [3, 3, 3, 3, 3];

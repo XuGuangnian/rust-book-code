@@ -60,7 +60,7 @@ fn generate_workout(intensity: u32, random_number: u32) {
     }
 }
 
-pub(crate) fn closure() {
+pub fn closure() {
     let simulated_user_specified_value = 10;
     let simulated_random_number = 7;
 
@@ -83,7 +83,7 @@ mod tests {
     }
 }
 
-pub(crate) fn closure_scope() {
+pub fn closure_scope() {
     let x = 4;
 
     let equal_to_x = |z| z == x;
@@ -93,7 +93,7 @@ pub(crate) fn closure_scope() {
     assert!(equal_to_x(y));
 }
 
-pub(crate) fn closure_move() {
+pub fn closure_move() {
     let x = vec![1, 2, 3];
 
     let equal_to_x = move |z| z == x;

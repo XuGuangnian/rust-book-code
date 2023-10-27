@@ -8,7 +8,7 @@ enum List {
     Nil,
 }
 
-pub(crate) fn cons_list() {
+pub fn cons_list() {
     let value = Rc::new(RefCell::new(5));
 
     let a = Rc::new(Cons(Rc::clone(&value), Rc::new(Nil)));

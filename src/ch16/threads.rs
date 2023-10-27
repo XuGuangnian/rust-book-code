@@ -1,7 +1,7 @@
 use std::thread;
 use std::time::Duration;
 
-pub(crate) fn create() {
+pub fn create() {
     let handle = thread::spawn(|| {
         for i in 0..10 {
             println!("hi number {} from the spawned thread!", i);
@@ -17,7 +17,7 @@ pub(crate) fn create() {
     }
 }
 
-pub(crate) fn move_closure() {
+pub fn move_closure() {
     let v = vec![1, 2, 3];
 
     let handle = thread::spawn(move || {

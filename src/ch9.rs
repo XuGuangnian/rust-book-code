@@ -1,13 +1,13 @@
 mod panic;
 mod result;
 
-pub(crate) fn panic() {
+pub fn panic() {
     // panic::panic_demo();
 
     // panic::index_out_bounds();
 }
 
-pub(crate) fn result() {
+pub fn result() {
     // result::open_file();
 
     // result::recoverable_errors();

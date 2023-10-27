@@ -1,7 +1,7 @@
 mod closures;
 mod iterators;
 
-pub(crate) fn closures() {
+pub fn closures() {
     // closures::closure();
 
     closures::closure_scope();
@@ -9,7 +9,7 @@ pub(crate) fn closures() {
     closures::closure_move();
 }
 
-pub(crate) fn iterators() {
+pub fn iterators() {
     iterators::create();
 
     iterators::adaptors();

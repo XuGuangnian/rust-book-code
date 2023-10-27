@@ -1,6 +1,6 @@
 use std::io;
 
-pub(crate) fn temperature_convert() {
+pub fn temperature_convert() {
     // Loop until person asks to quit.
     'main_loop: loop {
         // Get and validate the input.
@@ -43,7 +43,7 @@ fn celsius_to_fahrenheit(c: f64) -> f64 {
     c * 1.8 + 32.0
 }
 
-pub(crate) fn fibonacci() {
+pub fn fibonacci() {
     loop {
         println!("\nWhich Fibonacci number? (max: 185; ‘quit’ to exit)");
 
@@ -80,7 +80,7 @@ fn f(n: u128) -> u128 {
     return prev;
 }
 
-pub(crate) fn print_lyrics() {
+pub fn print_lyrics() {
     // Display the lyrics for the twelve days.
     for day in 0..12 {
         display_lyrics_for_day(day);

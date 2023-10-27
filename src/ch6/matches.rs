@@ -1,4 +1,4 @@
-pub(crate) fn match_coin() {
+pub fn match_coin() {
     enum Coin {
         Penny,
         Nickel,
@@ -19,7 +19,7 @@ pub(crate) fn match_coin() {
     }
 }
 
-pub(crate) fn bind_values() {
+pub fn bind_values() {
     #[derive(Debug)]
     enum UsState {
         Alabama,
@@ -52,7 +52,7 @@ pub(crate) fn bind_values() {
     value_in_cents(Coin::Quarter(UsState::Alaska));
 }
 
-pub(crate) fn match_option() {
+pub fn match_option() {
     fn plus_one(x: Option<i32>) -> Option<i32> {
         // Matches must be Exhaustive
         match x {
@@ -67,7 +67,7 @@ pub(crate) fn match_option() {
     println!("six: {:?}, none: {:?}", six, none)
 }
 
-pub(crate) fn match_catch_all() {
+pub fn match_catch_all() {
     let dice_roll = 9;
     match dice_roll {
         3 => add_fancy_hat(),

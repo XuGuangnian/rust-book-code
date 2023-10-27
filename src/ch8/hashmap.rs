@@ -1,7 +1,9 @@
 use std::collections::HashMap;
 
-// pub, pub(crate)的区别？？
-pub(crate) fn create() {
+// pub, pub(crate)的区别: https://cheats.rs/#organizing-code
+// pub "Public if parent path is public" visibility for T.
+// pub(crate) Visible at most in current crate.
+pub fn create() {
     let mut scores = HashMap::new();
     scores.insert(String::from("Blue"), 10);
     scores.insert(String::from("Yellow"), 50);
@@ -10,9 +12,10 @@ pub(crate) fn create() {
     let teams = vec![String::from("Blue"), String::from("Yellow")];
     let initial_scores = vec![10, 50];
     let scores: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect();
+    println!("{:?}", scores);
 }
 
-pub(crate) fn ownership() {
+pub fn ownership() {
     let field_name = String::from("Favorite color");
     let field_value = String::from("Blue");
 
@@ -22,7 +25,7 @@ pub(crate) fn ownership() {
     // println!("{:?}", field_name); // field_name is no longer valid here
 }
 
-pub(crate) fn access_values() {
+pub fn access_values() {
     let mut scores = HashMap::new();
 
     scores.insert(String::from("Blue"), 10);
@@ -33,7 +36,7 @@ pub(crate) fn access_values() {
     println!("{:?}", score); // Some(&10)
 }
 
-pub(crate) fn iterate() {
+pub fn iterate() {
     let mut scores = HashMap::new();
     scores.insert(String::from("Blue"), 10);
     scores.insert(String::from("Yellow"), 50);
@@ -43,7 +46,7 @@ pub(crate) fn iterate() {
     }
 }
 
-pub(crate) fn update() {
+pub fn update() {
     // overwrite an existing value
     let mut scores = HashMap::new();
     scores.insert(String::from("Blue"), 10);

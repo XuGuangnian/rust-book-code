@@ -1,5 +1,5 @@
 mod crates;
 
-pub(crate) fn crates() {
+pub fn crates() {
     crates::pub_use();
 }

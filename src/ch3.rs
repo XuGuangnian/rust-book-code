@@ -4,14 +4,14 @@ mod exercises;
 mod func;
 mod variables;
 
-pub(crate) fn variables() {
+pub fn variables() {
     variables::immut_variables();
     variables::mut_variables();
     variables::constants();
     variables::shadowing();
 }
 
-pub(crate) fn data_type() {
+pub fn data_type() {
     data_type::integer();
     data_type::float();
     data_type::calc();
@@ -21,7 +21,7 @@ pub(crate) fn data_type() {
     data_type::array();
 }
 
-pub(crate) fn func() {
+pub fn func() {
     func::func_example();
     func::func_param(5);
     func::print_labeled_measurement(5, 'h');
@@ -30,12 +30,12 @@ pub(crate) fn func() {
     func::return_value();
 }
 
-pub(crate) fn comments() {
+pub fn comments() {
     // I’m feeling lucky today
     let lucky_number = 7;
 }
 
-pub(crate) fn branches() {
+pub fn branches() {
     branches::if_else();
     branches::loop_func();
     branches::loop_label();
@@ -43,7 +43,7 @@ pub(crate) fn branches() {
     branches::for_element();
 }
 
-pub(crate) fn exercises() {
+pub fn exercises() {
     exercises::temperature_convert();
     exercises::fibonacci();
     exercises::print_lyrics();

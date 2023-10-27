@@ -11,7 +11,7 @@ pub fn exercises() {
     exercise::three();
 }
 
-pub(crate) fn hashmap() {
+pub fn hashmap() {
     hashmap::create();
 
     hashmap::ownership();
@@ -23,7 +23,7 @@ pub(crate) fn hashmap() {
     hashmap::update();
 }
 
-pub(crate) fn string() {
+pub fn string() {
     string::create();
 
     string::update();
@@ -39,7 +39,7 @@ pub(crate) fn string() {
     string::iterate();
 }
 
-pub(crate) fn vector() {
+pub fn vector() {
     vector::create();
 
     vector::update();

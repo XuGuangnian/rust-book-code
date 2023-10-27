@@ -1,6 +1,6 @@
 use std::iter::Iterator;
 
-pub(crate) fn create() {
+pub fn create() {
     let v1 = vec![1, 2, 3];
 
     let v1_iter = v1.iter(); // iter() get the reference of v1
@@ -15,7 +15,7 @@ pub(crate) fn create() {
     // println!("{:?}", v1_iter); // value borrowed here after move
 }
 
-pub(crate) fn adaptors() {
+pub fn adaptors() {
     let v1 = vec![1, 2, 3];
 
     let v2: Vec<_> = v1.iter().map(|x| x + 1).collect();

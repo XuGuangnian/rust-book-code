@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub(crate) fn one() {
+pub fn one() {
     let mut nums = vec![1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10];
     let avg = average(&nums);
     let median = median(&mut nums);
@@ -36,7 +36,7 @@ fn average(nums: &[i32]) -> i32 {
     nums.iter().sum::<i32>() / nums.len() as i32
 }
 
-pub(crate) fn two() {
+pub fn two() {
     let mut str = String::from("first");
     let vowel_result = pig_latin(str);
     println!("{:?}", vowel_result);
@@ -58,7 +58,7 @@ fn pig_latin(mut str: String) -> String {
 }
 
 // 待修改
-pub(crate) fn three() {
+pub fn three() {
     let str = String::from("Add Sally to Engineering");
     let str_vec: Vec<&str> = str.split_whitespace().collect();
     let employee = str_vec[1];

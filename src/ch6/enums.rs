@@ -1,4 +1,4 @@
-pub(crate) fn enum_definition() {
+pub fn enum_definition() {
     {
         enum IpAddrKind {
             V4,
@@ -68,7 +68,7 @@ pub(crate) fn enum_definition() {
     {}
 }
 
-pub(crate) fn enum_and_struct() {
+pub fn enum_and_struct() {
     #[derive(Debug)]
     enum Message {
         Quit,
@@ -96,7 +96,7 @@ pub(crate) fn enum_and_struct() {
     struct ChangeColorMessage(i32, i32, i32); // 元组结构体
 }
 
-pub(crate) fn enum_option() {
+pub fn enum_option() {
     let some_number = Some(0);
     let some_char = Some('e');
 

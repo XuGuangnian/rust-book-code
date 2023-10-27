@@ -1,4 +1,4 @@
-pub(crate) fn references() {
+pub fn references() {
     let s1 = String::from("hello");
 
     let len = calculate_length(&s1);
@@ -10,7 +10,7 @@ fn calculate_length(s: &String) -> usize {
     s.len()
 }
 
-pub(crate) fn mutable_references() {
+pub fn mutable_references() {
     let mut s = String::from("hello");
 
     change(&mut s);
@@ -22,7 +22,7 @@ fn change(s: &mut String) {
     s.push_str(", world");
 }
 
-pub(crate) fn data_race() {
+pub fn data_race() {
     let mut s = String::from("hello");
 
     let r1 = &s; // 没问题
@@ -33,7 +33,7 @@ pub(crate) fn data_race() {
     // println!("{}, {}, and {}", r1, r2, r3);
 }
 
-pub(crate) fn dangling_references() {
+pub fn dangling_references() {
     let reference_to_nothing = dangle();
 }
 

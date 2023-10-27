@@ -2,14 +2,14 @@ mod example_structs;
 mod method_syntax;
 mod structure;
 
-pub(crate) fn structure() {
+pub fn structure() {
     structure::struct_definition();
     structure::tuple_structs();
     structure::unit_like_struct();
     structure::struct_reference_no_lifetime();
 }
 
-pub(crate) fn example_structs() {
+pub fn example_structs() {
     example_structs::rectangles();
     example_structs::rectangles_with_tuple();
     example_structs::rectangles_with_struct();
@@ -17,7 +17,7 @@ pub(crate) fn example_structs() {
     example_structs::dbg_macro();
 }
 
-pub(crate) fn method_syntax() {
+pub fn method_syntax() {
     method_syntax::impl_area();
     method_syntax::reference_and_dereference();
     method_syntax::can_hold();

@@ -1,7 +1,7 @@
 use std::sync::{Arc, Mutex};
 use std::thread;
 
-pub(crate) fn mutex() {
+pub fn mutex() {
     let m = Mutex::new(5);
 
     {
@@ -12,7 +12,7 @@ pub(crate) fn mutex() {
     println!("m = {:?}", m);
 }
 
-pub(crate) fn shared_mutex() {
+pub fn shared_mutex() {
     let counter = Arc::new(Mutex::new(0));
     let mut handles = vec![];
 

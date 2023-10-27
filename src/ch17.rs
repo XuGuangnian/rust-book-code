@@ -1,5 +1,5 @@
 mod oop;
 
-pub(crate) fn oop() {
+pub fn oop() {
     oop::inherit_like();
 }

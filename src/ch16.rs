@@ -4,7 +4,7 @@ mod message_passing;
 mod shared_state;
 mod threads;
 
-pub(crate) fn concurrency() {
+pub fn concurrency() {
     threads::create();
     threads::move_closure();
 

@@ -71,11 +71,11 @@ fn ch6() {
 }
 
 pub fn ch8() {
-    ch8::vector();
+    // ch8::vector();
 
-    ch8::string();
+    // ch8::string();
 
-    ch8::hashmap();
+    // ch8::hashmap();
 
     ch8::exercises();
 }

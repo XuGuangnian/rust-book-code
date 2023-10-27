@@ -2,7 +2,7 @@ mod generics;
 mod lifetimes;
 mod traits;
 
-pub(crate) fn generics() {
+pub fn generics() {
     generics::extract_functions();
 
     generics::generics_function();
@@ -12,7 +12,7 @@ pub(crate) fn generics() {
     generics::generics_enum();
 }
 
-pub(crate) fn traits() {
+pub fn traits() {
     traits::aggregator();
 
     traits::trait_parameter();
@@ -22,7 +22,7 @@ pub(crate) fn traits() {
     traits::trait_conditional();
 }
 
-pub(crate) fn lifetimes() {
+pub fn lifetimes() {
     lifetimes::lifetimes_syntax();
 
     lifetimes::lifetimes_struct();

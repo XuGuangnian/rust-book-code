@@ -1,4 +1,4 @@
-pub(crate) fn if_else() {
+pub fn if_else() {
     let number = 3;
 
     if number < 5 {
@@ -33,7 +33,7 @@ fn if_else_if() {
     }
 }
 
-pub(crate) fn loop_func() {
+pub fn loop_func() {
     // 无限循环
     // loop {
     //     println!("again!");
@@ -52,7 +52,7 @@ pub(crate) fn loop_func() {
     println!("The result is {result}");
 }
 
-pub(crate) fn loop_label() {
+pub fn loop_label() {
     let mut count = 0;
     'counting_up: loop {
         println!("count = {count}");
@@ -74,7 +74,7 @@ pub(crate) fn loop_label() {
     println!("End count = {count}");
 }
 
-pub(crate) fn while_func() {
+pub fn while_func() {
     let mut number = 3;
     while number != 0 {
         println!("{number}!");
@@ -93,7 +93,7 @@ fn while_element() {
     }
 }
 
-pub(crate) fn for_element() {
+pub fn for_element() {
     // while_element();
 
     let a = [10, 20, 30, 40, 50];

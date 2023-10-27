@@ -1,4 +1,4 @@
-pub(crate) fn match_one_pattern() {
+pub fn match_one_pattern() {
     let config_max = Some(3u8);
     match config_max {
         Some(max) => println!("The maximum is configured to be {}", max),
@@ -6,7 +6,7 @@ pub(crate) fn match_one_pattern() {
     }
 }
 
-pub(crate) fn if_let() {
+pub fn if_let() {
     let config_max = Some(3u8);
     if let Some(max) = config_max {
         println!("The maximum is configured to be {}", max);
@@ -27,7 +27,7 @@ enum Coin {
     Quarter(UsState),
 }
 
-pub(crate) fn coin() {
+pub fn coin() {
     let coin = Coin::Penny;
     let mut count = 0;
     match coin {

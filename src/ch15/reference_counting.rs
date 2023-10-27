@@ -6,7 +6,7 @@ enum List {
     Nil,
 }
 
-pub(crate) fn cons_list() {
+pub fn cons_list() {
     let a = Rc::new(Cons(5, Rc::new(Cons(10, Rc::new(Nil)))));
     println!("count after creating a = {}", Rc::strong_count(&a));
     let b = Cons(3, Rc::clone(&a));
