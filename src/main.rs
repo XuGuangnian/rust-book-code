@@ -13,8 +13,17 @@ mod ch3;
 mod ch4;
 mod ch5;
 mod ch6;
+mod ch7;
 mod ch8;
 mod ch9;
+
+// inline module
+mod ch7_garden_inline {}
+
+// src/ch7_garden.rs
+mod ch7_garden;
+// src/ch7_garden_mod/ch7_garden_mod
+mod ch7_garden_mod;
 
 fn main() {
     // ch1();
@@ -23,7 +32,7 @@ fn main() {
     // ch4();
     // ch5();
     // ch6();
-
+    // ch7();
     // ch8();
     // ch9();
     // ch10();
@@ -70,13 +79,16 @@ fn ch6() {
     ch6::if_let();
 }
 
+fn ch7() {
+    ch7::modules::module();
+    ch7::modules::module_path();
+    ch7::modules::pub_use();
+}
+
 pub fn ch8() {
-    // ch8::vector();
-
-    // ch8::string();
-
-    // ch8::hashmap();
-
+    ch8::vector();
+    ch8::string();
+    ch8::hashmap();
     ch8::exercises();
 }
 

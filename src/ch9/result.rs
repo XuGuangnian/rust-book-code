@@ -1,4 +1,3 @@
-use std::fmt::Error;
 use std::fs::File;
 use std::io::{ErrorKind, Read};
 use std::{fs, io};
@@ -40,7 +39,7 @@ pub fn unwrap_or_else() {
 }
 
 pub fn unwrap_and_expect() {
-    // let f = File::open("hello.txt").unwrap();
+    let f = File::open("hello.txt").unwrap();
 
     let f = File::open("hello.txt").expect("Failed to open hello.txt");
 }
@@ -79,8 +78,8 @@ pub fn propagate_errors_shortcut() {
     println!("{}", result);
 
     fn read_username_from_file() -> Result<String, io::Error> {
-        let mut username = String::new();
         let mut username_file = File::open("hello.txt")?;
+        let mut username = String::new();
         username_file.read_to_string(&mut username)?;
         Ok(username)
     }

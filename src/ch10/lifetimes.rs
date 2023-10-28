@@ -1,4 +1,3 @@
-use crate::ch9::result;
 use std::fmt::Display;
 
 pub fn lifetimes_syntax() {
