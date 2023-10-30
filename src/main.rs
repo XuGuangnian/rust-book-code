@@ -36,7 +36,8 @@ fn main() {
     // ch8();
     // ch9();
     // ch10();
-
+    // ch11();
+    // ch12();
     // ch13();
     // ch14: https://doc.rust-lang.org/cargo/
     // ch15();
@@ -94,27 +95,32 @@ pub fn ch8() {
 
 pub fn ch9() {
     ch9::panic();
-
     ch9::result();
 }
 
 pub fn ch10() {
     ch10::generics();
-
     ch10::traits();
-
     ch10::lifetimes();
+}
+
+fn ch11() {
+    // in lib.rs
+    // #[cfg(test)]
+    // mod tests {}
+}
+
+fn ch12() {
+    // minigrep
 }
 
 pub fn ch13() {
     ch13::closures();
-
     ch13::iterators();
 }
 
 pub fn ch14() {
     ch14::crates();
-
     // cargo workspace: https://github.com/XuGuangnian/add
 }
 

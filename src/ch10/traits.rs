@@ -1,5 +1,6 @@
-use rust_book_code::{NewsArticle, Summary, Tweet};
 use std::fmt::{Debug, Display};
+
+use rust_book_code::{NewsArticle, Summary, Tweet};
 
 pub fn aggregator() {
     let tweet = Tweet {
@@ -10,6 +11,7 @@ pub fn aggregator() {
     };
 
     println!("1 new tweet: {}", tweet.summarize());
+    println!("1 new tweet: {}", tweet.summarize2());
 
     let article = NewsArticle {
         headline: String::from("Penguins win the Stanley Cup Championship!"),
@@ -22,33 +24,56 @@ pub fn aggregator() {
     };
 
     println!("New article available! {}", article.summarize());
-
-    let tweet = Tweet {
-        username: String::from("horse_ebooks"),
-        content: String::from("of course, as you probably already know, people"),
-        reply: false,
-        retweet: false,
-    };
-
-    println!("1 new tweet: {}", tweet.summarize());
 }
 
 pub fn trait_parameter() {
+    let mut tweet = Tweet {
+        username: "notify".to_string(),
+        content: "Summary".to_string(),
+        reply: false,
+        retweet: false,
+    };
+    notify(&tweet);
+    // 参数类型：实现了 trait Summary 的类型
     pub fn notify(item: &impl Summary) {
         println!("Breaking news! {}", item.summarize());
     }
 
+    tweet.username = "notify_bound".to_string();
+    notify_bound(&tweet);
     pub fn notify_bound<T: Summary>(item: &T) {
         println!("Breaking news! {}", item.summarize());
     }
 
-    pub fn notify_two_param(item1: &impl Summary, item2: &impl Summary) {}
+    tweet.username = "notify_two_param".to_string();
+    let news_article = NewsArticle {
+        headline: "notify_two_param".to_string(),
+        location: "".to_string(),
+        author: "".to_string(),
+        content: "".to_string(),
+    };
+    notify_two_param(&tweet, &news_article);
+    pub fn notify_two_param(item1: &impl Summary, item2: &impl Summary) {
+        println!("Breaking news! {}-{}", item1.summarize(), item2.summarize());
+    }
 
-    pub fn notify_two_param_same_type<T: Summary>(item1: &T, item2: &T) {}
+    tweet.username = "notify_two_param_same_type".to_string();
+    notify_two_param_same_type(&tweet, &tweet);
+    pub fn notify_two_param_same_type<T: Summary>(item1: &T, item2: &T) {
+        println!("Breaking news! {}-{}", item1.summarize(), item2.summarize());
+    }
 
-    pub fn notify_two_trait(item: &(impl Summary + Display)) {}
+    tweet.username = "notify_two_trait".to_string();
+    notify_two_trait(&tweet);
+    pub fn notify_two_trait(item: &(impl Summary + Display)) {
+        println!("Breaking news! {}", item.summarize());
+    }
 
-    pub fn notify_two_trait_bound<T: Summary + Display>(item: &T) {}
+    tweet.username = "notify_two_trait_bound".to_string();
+    notify_two_trait_bound(&tweet);
+    pub fn notify_two_trait_bound<T: Summary + Display>(item: &T) {
+        println!("Breaking news! {}", item.summarize());
+    }
 
     fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {
         0
@@ -73,6 +98,7 @@ pub fn trait_return() {
         }
     }
 
+    // todo in ch17
     // fn returns_summarizable2(switch: bool) -> impl Summary {
     //     if switch {
     //         NewsArticle {
@@ -136,6 +162,10 @@ pub fn trait_conditional() {
     );
     // pair.cmp_display();
 
+    // std implements the ToString trait on any type that implements the Display trait
+    // impl<T: Display> ToString for T {
+    //     // --snip--
+    // }
     let s = 3.to_string();
     println!("{}", s)
 }

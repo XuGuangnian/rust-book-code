@@ -3,6 +3,8 @@
 //! `rust_book_code` is a collection of utilities to make performing certain
 //! calculations more convenient.
 
+use std::fmt::{Display, Formatter};
+
 pub use crate::front_of_house::hosting;
 
 pub use self::kinds::PrimaryColor;
@@ -79,6 +81,10 @@ pub trait Summary {
     fn summarize(&self) -> String {
         format!("(Read more from {}...)", self.summarize_author())
     }
+
+    fn summarize2(&self) -> String {
+        format!("(Read more from {}...)", self.summarize_author())
+    }
 }
 
 pub struct NewsArticle {
@@ -112,6 +118,12 @@ impl Summary for Tweet {
 
     fn summarize(&self) -> String {
         format!("{}: {}", self.username, self.content)
+    }
+}
+
+impl Display for Tweet {
+    fn fmt(&self, _f: &mut Formatter<'_>) -> std::fmt::Result {
+        Ok(())
     }
 }
 

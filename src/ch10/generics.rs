@@ -21,10 +21,10 @@ pub fn generics_function() {
     println!("The largest char is {}", result);
 }
 
-fn largest_i32(list: &[i32]) -> i32 {
-    let mut largest = list[0];
+fn largest_i32(list: &[i32]) -> &i32 {
+    let mut largest = &list[0];
 
-    for &item in list {
+    for item in list {
         if item > largest {
             largest = item;
         }
@@ -33,10 +33,10 @@ fn largest_i32(list: &[i32]) -> i32 {
     largest
 }
 
-fn largest_char(list: &[char]) -> char {
-    let mut largest = list[0];
+fn largest_char(list: &[char]) -> &char {
+    let mut largest = &list[0];
 
-    for &item in list {
+    for item in list {
         if item > largest {
             largest = item;
         }
