@@ -9,7 +9,7 @@ pub fn create() {
         }
     });
 
-    handle.join().unwrap();
+    handle.join().unwrap(); // join会等待线程执行完毕
 
     for i in 0..5 {
         println!("hi number {} from the main thread!", i);

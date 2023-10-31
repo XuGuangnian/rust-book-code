@@ -1,3 +1,4 @@
+use std::rc::Rc;
 use std::sync::{Arc, Mutex};
 use std::thread;
 
@@ -5,7 +6,7 @@ pub fn mutex() {
     let m = Mutex::new(5);
 
     {
-        let mut num = m.lock().unwrap();
+        let mut num = m.lock().unwrap(); // 这个调用会阻塞当前线程，直到我们拥有锁为止。
         *num = 6;
     }
 

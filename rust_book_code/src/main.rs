@@ -31,9 +31,9 @@ fn main() {
     // ch12();
     // ch13();
     // ch14: https://doc.rust-lang.org/cargo/
-    ch15();
+    // ch15();
     // ch16();
-    // ch17();
+    ch17();
 }
 
 pub fn ch1() {
@@ -123,6 +123,8 @@ pub fn ch15() {
 }
 
 pub fn ch16() {
+    ch16::threads();
+    ch16::message_passing();
     ch16::concurrency();
 }
 
