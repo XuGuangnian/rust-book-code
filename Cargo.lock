@@ -18,6 +18,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "blog"
+version = "0.1.0"
+
+[[package]]
 name = "cfg-if"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -88,6 +92,7 @@ dependencies = [
 name = "rust_book_code"
 version = "0.2.1"
 dependencies = [
+ "blog",
  "rand",
 ]
 

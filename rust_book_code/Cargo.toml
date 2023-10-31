@@ -10,5 +10,6 @@ repository = "https://github.com/XuGuangnian/rust-book-code"
 
 [dependencies]
 rand = "0.8.5"
+blog = { path = "../blog" }
 
 

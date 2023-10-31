@@ -69,30 +69,6 @@ fn internal_adder(a: i32, b: i32) -> i32 {
     a + b
 }
 
-struct Counter {
-    count: u32,
-}
-
-impl Counter {
-    #[allow(unused)]
-    fn new() -> Counter {
-        Counter { count: 0 }
-    }
-}
-
-impl Iterator for Counter {
-    type Item = u32;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        if self.count < 5 {
-            self.count += 1;
-            Some(self.count)
-        } else {
-            None
-        }
-    }
-}
-
 /// Adds one to the number given.
 ///
 /// # Examples
@@ -134,40 +110,7 @@ pub mod utils {
     }
 }
 
-/// oop: encapsulation
-pub struct AveragedCollection {
-    list: Vec<i32>,
-    average: f64,
-}
-
-impl AveragedCollection {
-    pub fn add(&mut self, value: i32) {
-        self.list.push(value);
-        self.update_average();
-    }
-
-    pub fn remove(&mut self) -> Option<i32> {
-        let result = self.list.pop();
-        match result {
-            Some(value) => {
-                self.update_average();
-                Some(value)
-            }
-            None => None,
-        }
-    }
-
-    pub fn average(&self) -> f64 {
-        self.average
-    }
-
-    fn update_average(&mut self) {
-        let total: i32 = self.list.iter().sum();
-        self.average = total as f64 / self.list.len() as f64;
-    }
-}
-
-/// oop: inherit-like
+/// oop: trait_object
 pub trait Draw {
     fn draw(&self);
 }
@@ -194,42 +137,51 @@ pub struct Button {
 impl Draw for Button {
     fn draw(&self) {
         // code to actually draw a button
+        println!("draw a button");
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use std::cell::RefCell;
+pub struct Post {
+    content: String,
+}
 
-    use super::*;
+pub struct DraftPost {
+    content: String,
+}
 
-    #[test]
-    fn calling_next_directly() {
-        let mut counter = Counter::new();
-
-        assert_eq!(counter.next(), Some(1));
-        assert_eq!(counter.next(), Some(2));
-        assert_eq!(counter.next(), Some(3));
-        assert_eq!(counter.next(), Some(4));
-        assert_eq!(counter.next(), Some(5));
-        assert_eq!(counter.next(), None);
+impl Post {
+    pub fn new() -> DraftPost {
+        DraftPost {
+            content: String::new(),
+        }
     }
 
-    /*
-    1 * 2 = 2
-    2 * 3 = 6
-    3 * 4 = 12
-    4 * 5 = 20
-    5 None
-    6 + 12 = 18
-     */
-    #[test]
-    fn using_other_iterator_trait_methods() {
-        let sum: u32 = Counter::new()
-            .zip(Counter::new().skip(1))
-            .map(|(a, b)| a * b)
-            .filter(|x| x % 3 == 0)
-            .sum();
-        assert_eq!(18, sum);
+    pub fn content(&self) -> &str {
+        &self.content
+    }
+}
+
+impl DraftPost {
+    // --snip--
+    pub fn add_text(&mut self, text: &str) {
+        self.content.push_str(text);
+    }
+
+    pub fn request_review(self) -> PendingReviewPost {
+        PendingReviewPost {
+            content: self.content,
+        }
+    }
+}
+
+pub struct PendingReviewPost {
+    content: String,
+}
+
+impl PendingReviewPost {
+    pub fn approve(self) -> Post {
+        Post {
+            content: self.content,
+        }
     }
 }

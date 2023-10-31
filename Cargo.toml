@@ -5,6 +5,7 @@ members = [
     "module",
     "adder",
     "add_one",
+    "blog",
 ]
 resolver = "2"
 
