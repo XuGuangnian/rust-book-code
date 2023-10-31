@@ -2,7 +2,9 @@
 members = [
     "rust_book_code",
     "minigrep",
-    "module"
+    "module",
+    "adder",
+    "add_one",
 ]
 resolver = "2"
 

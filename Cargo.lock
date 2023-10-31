@@ -3,6 +3,21 @@
 version = 3
 
 [[package]]
+name = "add_one"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
+
+[[package]]
+name = "adder"
+version = "0.1.0"
+dependencies = [
+ "add_one",
+ "rand",
+]
+
+[[package]]
 name = "cfg-if"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -71,7 +86,7 @@ dependencies = [
 
 [[package]]
 name = "rust_book_code"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "rand",
 ]
