@@ -25,13 +25,13 @@ fn main() {
     // ch6();
     // ch7();
     // ch8();
-    ch9();
+    // ch9();
     // ch10();
     // ch11();
     // ch12();
-    ch13();
+    // ch13();
     // ch14: https://doc.rust-lang.org/cargo/
-    // ch15();
+    ch15();
     // ch16();
     // ch17();
 }
@@ -112,7 +112,7 @@ pub fn ch13() {
 
 pub fn ch14() {
     ch14::crates();
-    // cargo workspace: https://github.com/XuGuangnian/add
+    // 2 packages: adder add_one
 }
 
 pub fn ch15() {
