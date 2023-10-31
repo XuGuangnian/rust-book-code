@@ -6,8 +6,10 @@ members = [
 ]
 resolver = "2"
 
+# 开发模式的默认优化等级 0
 [profile.dev]
-opt-level = 1
+opt-level = 0
 
+# 发布模式的默认优化等级 3
 [profile.release]
 opt-level = 3
