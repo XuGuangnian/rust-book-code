@@ -13,17 +13,8 @@ mod ch3;
 mod ch4;
 mod ch5;
 mod ch6;
-mod ch7;
 mod ch8;
 mod ch9;
-
-// inline module
-mod ch7_garden_inline {}
-
-// src/ch7_garden.rs
-mod ch7_garden;
-// src/ch7_garden_mod/ch7_garden_mod
-mod ch7_garden_mod;
 
 fn main() {
     // ch1();
@@ -34,15 +25,15 @@ fn main() {
     // ch6();
     // ch7();
     // ch8();
-    // ch9();
+    ch9();
     // ch10();
     // ch11();
     // ch12();
-    // ch13();
+    ch13();
     // ch14: https://doc.rust-lang.org/cargo/
     // ch15();
     // ch16();
-    ch17();
+    // ch17();
 }
 
 pub fn ch1() {
@@ -81,9 +72,8 @@ fn ch6() {
 }
 
 fn ch7() {
-    ch7::modules::module();
-    ch7::modules::module_path();
-    ch7::modules::pub_use();
+    // 一些实验代码会破坏代码结构，因此移动到 module 包下进行
+    // cargo run --bin module
 }
 
 pub fn ch8() {
@@ -112,6 +102,7 @@ fn ch11() {
 
 fn ch12() {
     // minigrep
+    // cd ../minigrep 最好在此目录下进行，不然读取文件的目录可能不匹配
 }
 
 pub fn ch13() {

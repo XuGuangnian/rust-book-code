@@ -1,5 +1,5 @@
 pub mod modules {
-    use rust_book_code::{eat_at_restaurant, hosting};
+    use module::{eat_at_restaurant, hosting};
 
     use crate::ch7_garden::vegetables::Asparagus;
 

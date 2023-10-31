@@ -3,7 +3,7 @@ use std::io::{ErrorKind, Read};
 use std::{fs, io};
 
 pub fn open_file() {
-    let f = File::open("hello.txt");
+    let f = File::open("./rust_book_code/hello.txt");
 
     let f = match f {
         Ok(file) => file,
@@ -12,12 +12,12 @@ pub fn open_file() {
 }
 
 pub fn recoverable_errors() {
-    let f = File::open("hello.txt");
+    let f = File::open("./rust_book_code/hello.txt");
 
     let f = match f {
         Ok(file) => file,
         Err(error) => match error.kind() {
-            ErrorKind::NotFound => match File::create("hello.txt") {
+            ErrorKind::NotFound => match File::create("./rust_book_code/hello.txt") {
                 Ok(fc) => fc,
                 Err(e) => panic!("Problem creating the file: {:?}", e),
             },
@@ -27,9 +27,9 @@ pub fn recoverable_errors() {
 }
 
 pub fn unwrap_or_else() {
-    let f = File::open("hello.txt").unwrap_or_else(|error| {
+    let f = File::open("./rust_book_code/hello.txt").unwrap_or_else(|error| {
         if error.kind() == ErrorKind::NotFound {
-            File::create("hello.txt").unwrap_or_else(|error| {
+            File::create("./rust_book_code/hello.txt").unwrap_or_else(|error| {
                 panic!("Problem creating the file: {:?}", error);
             })
         } else {
@@ -39,9 +39,9 @@ pub fn unwrap_or_else() {
 }
 
 pub fn unwrap_and_expect() {
-    let f = File::open("hello.txt").unwrap();
+    let f = File::open("./rust_book_code/hello.txt").unwrap();
 
-    let f = File::open("hello.txt").expect("Failed to open hello.txt");
+    let f = File::open("./rust_book_code/hello.txt").expect("Failed to open hello.txt");
 }
 
 pub fn propagate_errors() {
@@ -53,7 +53,7 @@ pub fn propagate_errors() {
     println!("{}", result);
 
     fn read_username_from_file() -> Result<String, io::Error> {
-        let f = File::open("hello.txt");
+        let f = File::open("./rust_book_code/hello.txt");
 
         let mut f = match f {
             Ok(file) => file,
@@ -78,7 +78,7 @@ pub fn propagate_errors_shortcut() {
     println!("{}", result);
 
     fn read_username_from_file() -> Result<String, io::Error> {
-        let mut username_file = File::open("hello.txt")?;
+        let mut username_file = File::open("./rust_book_code/hello.txt")?;
         let mut username = String::new();
         username_file.read_to_string(&mut username)?;
         Ok(username)
@@ -95,7 +95,7 @@ pub fn shortcut_chains() {
 
     fn read_username_from_file() -> Result<String, io::Error> {
         let mut username = String::new();
-        File::open("hello.txt")?.read_to_string(&mut username)?;
+        File::open("./rust_book_code/hello.txt")?.read_to_string(&mut username)?;
         Ok(username)
     }
 }
@@ -109,7 +109,7 @@ pub fn read_to_string() {
     println!("{}", result);
 
     fn read_username_from_file() -> Result<String, io::Error> {
-        fs::read_to_string("hello.txt")
+        fs::read_to_string("./rust_book_code/hello.txt")
     }
 }
 

@@ -1,42 +1,60 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug executable 'rust_book_code'",
-            "cargo": {
-                "args": [
-                    "build",
-                    "--bin=rust_book_code",
-                    "--package=rust_book_code"
-                ],
-                "filter": {
-                    "name": "rust_book_code",
-                    "kind": "bin"
-                }
-            },
-            "args": [],
-            "cwd": "${workspaceFolder}"
-        },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug unit tests in executable 'rust_book_code'",
-            "cargo": {
-                "args": [
-                    "test",
-                    "--no-run",
-                    "--bin=rust_book_code",
-                    "--package=rust_book_code"
-                ],
-                "filter": {
-                    "name": "rust_book_code",
-                    "kind": "bin"
-                }
-            },
-            "args": [],
-            "cwd": "${workspaceFolder}"
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'module'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=module",
+          "--package=module"
+        ],
+        "filter": {
+          "name": "module",
+          "kind": "bin"
         }
-    ]
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'rust_book_code'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=rust_book_code",
+          "--package=rust_book_code"
+        ],
+        "filter": {
+          "name": "rust_book_code",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'rust_book_code'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=rust_book_code",
+          "--package=rust_book_code"
+        ],
+        "filter": {
+          "name": "rust_book_code",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
 }

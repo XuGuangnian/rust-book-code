@@ -5,75 +5,9 @@
 
 use std::fmt::{Display, Formatter};
 
-pub use crate::front_of_house::hosting;
-
 pub use self::kinds::PrimaryColor;
 pub use self::kinds::SecondaryColor;
 pub use self::utils::mix;
-
-pub mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-    }
-}
-
-pub fn eat_at_restaurant() {
-    // 绝对路径
-    crate::front_of_house::hosting::add_to_waitlist();
-
-    // 相对路径
-    front_of_house::hosting::add_to_waitlist();
-    // pub use
-    hosting::add_to_waitlist();
-
-    let mut meal = back_of_house::Breakfast::summer("Rye");
-    // pub toast
-    meal.toast = String::from("Wheat");
-    println!("I'd like {} toast please", meal.toast);
-    // seasonal_fruit 不能访问非pub属性
-    // meal.seasonal_fruit = String::from("blueberries");
-
-    println!("{:?}", back_of_house::Appetizer::Soup);
-    println!("{:?}", back_of_house::Appetizer::Salad)
-}
-
-fn deliver_order() {
-    println!("deliver_order");
-}
-
-#[allow(dead_code)]
-mod back_of_house {
-    fn fix_incorrect_order() {
-        cook_order();
-        // super
-        super::deliver_order();
-    }
-
-    fn cook_order() {}
-
-    // 这个结构体会变成公有的，但是这个结构体的字段仍然是私有的。
-    #[allow(dead_code)]
-    pub struct Breakfast {
-        pub toast: String,
-        seasonal_fruit: String,
-    }
-
-    impl Breakfast {
-        pub fn summer(toast: &str) -> Breakfast {
-            Breakfast {
-                toast: String::from(toast),
-                seasonal_fruit: String::from("peaches"),
-            }
-        }
-    }
-
-    // 将枚举设为公有，则它的所有成员都将变为公有
-    #[derive(Debug)]
-    pub enum Appetizer {
-        Soup,
-        Salad,
-    }
-}
 
 pub trait Summary {
     fn summarize_author(&self) -> String;
@@ -350,31 +284,6 @@ mod tests {
         limit_tracker.set_value(80);
 
         assert_eq!(mock_messenger.sent_messages.borrow().len(), 1);
-    }
-
-    #[test]
-    fn iterator_demonstration() {
-        let v1 = vec![1, 2, 3];
-
-        let mut v1_iter = v1.iter();
-
-        assert_eq!(v1_iter.next(), Some(&1));
-        assert_eq!(v1_iter.next(), Some(&2));
-        assert_eq!(v1_iter.next(), Some(&3));
-        assert_eq!(v1_iter.next(), None);
-    }
-
-    #[test]
-    fn iterator_sum() {
-        let v1 = vec![1, 2, 3];
-
-        let v1_iter = v1.iter();
-
-        let total: i32 = v1_iter.sum(); // `v1_iter` moved
-
-        // println!("{:?}", v1_iter);
-
-        assert_eq!(total, 6);
     }
 
     #[test]
