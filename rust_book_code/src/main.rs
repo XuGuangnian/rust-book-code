@@ -116,7 +116,10 @@ pub fn ch14() {
 }
 
 pub fn ch15() {
-    ch15::smart_pointer();
+    ch15::smart_pointer_box();
+    ch15::smart_pointer_rc();
+    ch15::interior_mutability();
+    ch15::reference_cycles();
 }
 
 pub fn ch16() {

@@ -1,14 +1,12 @@
 use crate::ch15::smart_pointer::List::{Cons, Nil};
-use crate::ch15::smart_pointer::RcList::{RcCons, RcNil};
-use std::cell::RefCell;
 use std::ops::Deref;
-use std::rc::Rc;
 
 pub fn heap_box() {
     let b = Box::new(5);
     println!("b = {}", b);
 }
 
+#[derive(Debug)]
 enum List {
     Cons(i32, Box<List>),
     Nil,
@@ -16,6 +14,7 @@ enum List {
 
 pub fn cons_list() {
     let list = Cons(1, Box::new(Cons(2, Box::new(Cons(3, Box::new(Nil))))));
+    println!("cons_list: {:?}", list);
 }
 
 struct MyBox<T>(T);
@@ -42,15 +41,15 @@ fn hello_string(name: &String) {
     println!("Hello, {}!", name);
 }
 
-pub fn deref() {
+pub fn deref_trait() {
     let x = 5;
     let y = MyBox::new(x);
     assert_eq!(5, x);
     assert_eq!(5, *y); // *(y.deref())
 
     let m = MyBox::new(String::from("Rust"));
-    hello_str(&m);
-    hello_string(&m);
+    hello_str(&m); // &MyBox<String> -> &String -> &str
+    hello_string(&m); // &MyBox<String> -> &String
 }
 
 struct CustomSmartPointer {
@@ -80,21 +79,4 @@ pub fn std_mem_drop() {
     println!("CustomSmartPointer created.");
     drop(c);
     println!("CustomSmartPointer dropped before the end of main.");
-}
-
-enum RcList {
-    RcCons(i32, Rc<RcList>),
-    RcNil,
-}
-
-pub fn reference_counting() {
-    let a = Rc::new(RcCons(5, Rc::new(RcCons(10, Rc::new(RcNil)))));
-    println!("count after creating a = {}", Rc::strong_count(&a));
-    let b = RcCons(3, Rc::clone(&a));
-    println!("count after creating b = {}", Rc::strong_count(&a));
-    {
-        let c = RcCons(4, Rc::clone(&a));
-        println!("count after creating c = {}", Rc::strong_count(&a));
-    }
-    println!("count after c goes out of scope = {}", Rc::strong_count(&a));
 }

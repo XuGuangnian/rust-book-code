@@ -55,6 +55,28 @@ pub fn weak_reference() {
         children: RefCell::new(vec![]),
     });
 
+    println!("leaf parent = {:?}", leaf.parent.borrow().upgrade());
+
+    let branch = Rc::new(Node {
+        value: 5,
+        parent: RefCell::new(Weak::new()),
+        children: RefCell::new(vec![Rc::clone(&leaf)]),
+    });
+
+    *leaf.parent.borrow_mut() = Rc::downgrade(&branch); // 创建弱引用
+
+    println!("leaf parent = {:?}", leaf.parent.borrow().upgrade()); // 获取弱引用所指向的值 branch
+
+    change_value();
+}
+
+fn change_value() {
+    let leaf = Rc::new(Node {
+        value: 3,
+        parent: RefCell::new(Weak::new()),
+        children: RefCell::new(vec![]),
+    });
+
     println!(
         "leaf strong = {}, weak = {}",
         Rc::strong_count(&leaf),
