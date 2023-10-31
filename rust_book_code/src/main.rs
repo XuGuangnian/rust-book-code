@@ -8,6 +8,7 @@ mod ch14;
 mod ch15;
 mod ch16;
 mod ch17;
+mod ch18;
 mod ch2;
 mod ch3;
 mod ch4;
@@ -33,7 +34,8 @@ fn main() {
     // ch14: https://doc.rust-lang.org/cargo/
     // ch15();
     // ch16();
-    ch17();
+    // ch17();
+    ch18();
 }
 
 pub fn ch1() {
@@ -131,4 +133,8 @@ pub fn ch16() {
 pub fn ch17() {
     ch17::oop();
     ch17::oodp();
+}
+
+pub fn ch18() {
+    ch18::pattern_places();
 }
