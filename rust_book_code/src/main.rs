@@ -148,4 +148,5 @@ pub fn ch19() {
     ch19::advanced_traits();
     ch19::advanced_types();
     ch19::advanced_functions_and_closures();
+    ch19::macros();
 }

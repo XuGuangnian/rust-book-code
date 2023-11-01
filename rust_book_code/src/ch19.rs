@@ -1,6 +1,7 @@
 mod adv_func_cls;
 mod advanced_traits;
 mod advanced_types;
+mod macros;
 mod unsafe_rust;
 
 pub fn unsafe_rust() {
@@ -33,4 +34,11 @@ pub fn advanced_types() {
 pub fn advanced_functions_and_closures() {
     adv_func_cls::function_pointer();
     adv_func_cls::return_closures();
+}
+
+pub fn macros() {
+    macros::macro_rules();
+    macros::proc_macro_custom_derive();
+    macros::proc_macro_attribute_like();
+    macros::proc_macro_function_like();
 }

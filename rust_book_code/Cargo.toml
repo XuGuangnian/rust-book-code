@@ -11,5 +11,7 @@ repository = "https://github.com/XuGuangnian/rust-book-code"
 [dependencies]
 rand = "0.8.5"
 blog = { path = "../blog" }
+hello_macro = { path = "../hello_macro" }
+hello_macro_derive = { path = "../hello_macro/hello_macro_derive" }
 
 
