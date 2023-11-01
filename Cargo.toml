@@ -8,6 +8,7 @@ members = [
     "blog",
     "hello_macro",
     "hello_macro/hello_macro_derive",
+    "hello",
 ]
 resolver = "2"
 
