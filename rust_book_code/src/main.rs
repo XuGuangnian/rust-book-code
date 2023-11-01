@@ -137,4 +137,6 @@ pub fn ch17() {
 
 pub fn ch18() {
     ch18::pattern_places();
+    ch18::refutability();
+    ch18::pattern_syntax();
 }
