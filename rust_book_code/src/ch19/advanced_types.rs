@@ -9,7 +9,7 @@ pub fn type_alias() {
     let x: i32 = 5;
     let y: Kilometers = 5;
 
-    print!("x + y = {}", x + y);
+    println!("x + y = {}", x + y);
 
     type Thunk = Box<dyn Fn() + Send + 'static>;
     let f: Thunk = Box::new(|| println!("hi"));

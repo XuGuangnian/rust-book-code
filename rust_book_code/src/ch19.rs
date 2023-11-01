@@ -1,3 +1,4 @@
+mod adv_func_cls;
 mod advanced_traits;
 mod advanced_types;
 mod unsafe_rust;
@@ -27,4 +28,9 @@ pub fn advanced_types() {
     advanced_types::type_alias();
     advanced_types::never_type();
     advanced_types::dyn_sized_types();
+}
+
+pub fn advanced_functions_and_closures() {
+    adv_func_cls::function_pointer();
+    adv_func_cls::return_closures();
 }
