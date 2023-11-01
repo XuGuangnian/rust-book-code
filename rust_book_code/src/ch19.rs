@@ -1,4 +1,5 @@
 mod advanced_traits;
+mod advanced_types;
 mod unsafe_rust;
 
 pub fn unsafe_rust() {
@@ -20,4 +21,10 @@ pub fn advanced_traits() {
     advanced_traits::calls_same_name_associated_functions(); // 非方法函数，参数值没有self，使用 fully qualified syntax: <Type as Trait>
     advanced_traits::supertraits();
     advanced_traits::newtype();
+}
+
+pub fn advanced_types() {
+    advanced_types::type_alias();
+    advanced_types::never_type();
+    advanced_types::dyn_sized_types();
 }

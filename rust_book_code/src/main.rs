@@ -146,4 +146,5 @@ pub fn ch18() {
 pub fn ch19() {
     ch19::unsafe_rust();
     ch19::advanced_traits();
+    ch19::advanced_types();
 }
