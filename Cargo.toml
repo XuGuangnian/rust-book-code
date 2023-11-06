@@ -9,6 +9,7 @@ members = [
     "hello_macro",
     "hello_macro/hello_macro_derive",
     "hello",
+    "web_server", "web_server_single", "web_server_multi",
 ]
 resolver = "2"
 
