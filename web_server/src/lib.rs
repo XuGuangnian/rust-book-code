@@ -41,11 +41,7 @@ impl ThreadPool {
     {
         let job = Box::new(f);
 
-<<<<<<< HEAD
         self.sender.as_ref().unwrap().send(job).unwrap();
-=======
-        self.sender.send(job).unwrap();
->>>>>>> origin/master
     }
 }
 
