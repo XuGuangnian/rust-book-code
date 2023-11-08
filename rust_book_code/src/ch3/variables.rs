@@ -19,7 +19,7 @@ pub fn constants() {
 }
 
 pub fn shadowing() {
-    let x = 5;
+    let x = 5; // 被隐藏，内存中还存有值
     let x = x + 1;
 
     {
