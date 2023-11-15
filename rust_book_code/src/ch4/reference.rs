@@ -1,4 +1,5 @@
 pub fn references() {
+    println!("==================== references ====================");
     let s1 = String::from("hello");
 
     let len = calculate_length(&s1);
@@ -11,6 +12,7 @@ fn calculate_length(s: &String) -> usize {
 }
 
 pub fn mutable_references() {
+    println!("==================== mutable_references ====================");
     let mut s = String::from("hello");
 
     change(&mut s);

@@ -18,6 +18,7 @@ impl List {
 }
 
 pub fn cons_list() {
+    println!("==================== cons_list ====================");
     let a = Rc::new(Cons(5, RefCell::new(Rc::new(Nil))));
 
     println!("a initial rc count: {}", Rc::strong_count(&a));
@@ -49,6 +50,7 @@ struct Node {
 }
 
 pub fn weak_reference() {
+    println!("==================== weak_reference ====================");
     let leaf = Rc::new(Node {
         value: 3,
         parent: RefCell::new(Weak::new()),

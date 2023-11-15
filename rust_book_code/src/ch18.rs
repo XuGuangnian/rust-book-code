@@ -11,8 +11,9 @@ pub fn pattern_places() {
 }
 
 pub fn refutability() {
+    println!("==================== refutability ====================");
     // irrefutable: 函数参数、let 语句和 for 循环只能接受不可反驳的模式
-    // refutable: f let 和 while let 表达式可以接受可反驳和不可反驳的模式
+    // refutable: if let 和 while let 表达式可以接受可反驳和不可反驳的模式
     let some_option_value: Option<i32> = None;
     // let Some(x) = some_option_value;
     if let Some(x) = some_option_value {

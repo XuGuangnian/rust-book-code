@@ -3,6 +3,7 @@ use std::io::{ErrorKind, Read};
 use std::{fs, io};
 
 pub fn open_file() {
+    println!("==================== open_file ====================");
     let f = File::open("./rust_book_code/hello.txt");
 
     let f = match f {
@@ -12,6 +13,7 @@ pub fn open_file() {
 }
 
 pub fn recoverable_errors() {
+    println!("==================== recoverable_errors ====================");
     let f = File::open("./rust_book_code/hello.txt");
 
     let f = match f {
@@ -27,6 +29,7 @@ pub fn recoverable_errors() {
 }
 
 pub fn unwrap_or_else() {
+    println!("==================== unwrap_or_else ====================");
     let f = File::open("./rust_book_code/hello.txt").unwrap_or_else(|error| {
         if error.kind() == ErrorKind::NotFound {
             File::create("./rust_book_code/hello.txt").unwrap_or_else(|error| {
@@ -39,12 +42,14 @@ pub fn unwrap_or_else() {
 }
 
 pub fn unwrap_and_expect() {
+    println!("==================== unwrap_and_expect ====================");
     let f = File::open("./rust_book_code/hello.txt").unwrap();
 
     let f = File::open("./rust_book_code/hello.txt").expect("Failed to open hello.txt");
 }
 
 pub fn propagate_errors() {
+    println!("==================== propagate_errors ====================");
     let result = match read_username_from_file() {
         Ok(s) => s,
         Err(err) => panic!("failed to read username"),
@@ -70,6 +75,7 @@ pub fn propagate_errors() {
 }
 
 pub fn propagate_errors_shortcut() {
+    println!("==================== propagate_errors_shortcut ====================");
     let result = match read_username_from_file() {
         Ok(s) => s,
         Err(err) => panic!("failed to read username"),
@@ -86,6 +92,7 @@ pub fn propagate_errors_shortcut() {
 }
 
 pub fn shortcut_chains() {
+    println!("==================== shortcut_chains ====================");
     let result = match read_username_from_file() {
         Ok(s) => s,
         Err(err) => panic!("failed to read username"),
@@ -101,6 +108,7 @@ pub fn shortcut_chains() {
 }
 
 pub fn read_to_string() {
+    println!("==================== read_to_string ====================");
     let result = match read_username_from_file() {
         Ok(s) => s,
         Err(err) => panic!("failed to read username"),
@@ -114,6 +122,7 @@ pub fn read_to_string() {
 }
 
 pub fn last_char() {
+    println!("==================== last_char ====================");
     assert_eq!(
         last_char_of_first_line("Hello, world\nHow are you today?"),
         Some('d')

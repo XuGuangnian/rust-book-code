@@ -4,6 +4,7 @@ use std::collections::HashMap;
 // pub "Public if parent path is public" visibility for T.
 // pub(crate) Visible at most in current crate.
 pub fn create() {
+    println!("==================== create ====================");
     let mut scores = HashMap::new();
     scores.insert(String::from("Blue"), 10);
     scores.insert(String::from("Yellow"), 50);
@@ -16,6 +17,7 @@ pub fn create() {
 }
 
 pub fn ownership() {
+    println!("==================== ownership ====================");
     let field_name = String::from("Favorite color");
     let field_value = String::from("Blue");
 
@@ -26,6 +28,7 @@ pub fn ownership() {
 }
 
 pub fn access_values() {
+    println!("==================== access_values ====================");
     let mut scores = HashMap::new();
 
     scores.insert(String::from("Blue"), 10);
@@ -37,6 +40,7 @@ pub fn access_values() {
 }
 
 pub fn iterate() {
+    println!("==================== iterate ====================");
     let mut scores = HashMap::new();
     scores.insert(String::from("Blue"), 10);
     scores.insert(String::from("Yellow"), 50);
@@ -47,6 +51,7 @@ pub fn iterate() {
 }
 
 pub fn update() {
+    println!("==================== update ====================");
     // overwrite an existing value
     let mut scores = HashMap::new();
     scores.insert(String::from("Blue"), 10);

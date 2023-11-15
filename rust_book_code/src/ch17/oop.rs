@@ -2,6 +2,7 @@ use rust_book_code::{Button, Draw, Screen};
 
 pub fn encapsulation() {
     /// oop: encapsulation
+    println!("==================== encapsulation ====================");
     pub struct AveragedCollection {
         list: Vec<i32>,
         average: f64,
@@ -50,6 +51,7 @@ impl Draw for SelectBox {
 }
 
 pub fn trait_object() {
+    println!("==================== trait_object ====================");
     let screen = Screen {
         components: vec![
             Box::new(SelectBox {

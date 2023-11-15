@@ -3,6 +3,7 @@ use std::fmt::{write, Formatter};
 use std::ops::Add;
 
 pub fn associated_types() {
+    println!("==================== associated_types ====================");
     pub trait Iterator {
         type Item;
         fn next(&mut self) -> Option<Self::Item>;
@@ -34,6 +35,7 @@ pub fn associated_types() {
 }
 
 pub fn default_generic_type() {
+    println!("==================== default_generic_type ====================");
     #[derive(Debug, Copy, Clone, PartialEq)]
     struct Point {
         x: i32,
@@ -58,6 +60,7 @@ pub fn default_generic_type() {
 }
 
 pub fn generic_type_parameter() {
+    println!("==================== generic_type_parameter ====================");
     #[derive(Debug, PartialEq)]
     struct Millimeters(u32);
     struct Meters(u32);
@@ -74,6 +77,7 @@ pub fn generic_type_parameter() {
 }
 
 pub fn calls_same_name_methods() {
+    println!("==================== calls_same_name_methods ====================");
     trait Pilot {
         fn fly(&self);
     }
@@ -109,6 +113,7 @@ pub fn calls_same_name_methods() {
 }
 
 pub fn calls_same_name_associated_functions() {
+    println!("==================== calls_same_name_associated_functions ====================");
     trait Animal {
         fn baby_name() -> String;
     }
@@ -133,6 +138,7 @@ pub fn calls_same_name_associated_functions() {
 }
 
 pub fn supertraits() {
+    println!("==================== supertraits ====================");
     trait OutlinePrint: fmt::Display {
         fn outline_print(&self) {
             let output = self.to_string();
@@ -162,6 +168,7 @@ pub fn supertraits() {
 }
 
 pub fn newtype() {
+    println!("==================== newtype ====================");
     struct Wrapper(Vec<String>);
 
     impl fmt::Display for Wrapper {

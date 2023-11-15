@@ -2,6 +2,7 @@ use blog::Post;
 use rust_book_code::Post as RustPost;
 
 pub fn state_pattern() {
+    println!("==================== state_pattern ====================");
     let mut post = Post::new();
 
     post.add_text("I ate a salad for lunch today");
@@ -18,6 +19,7 @@ pub fn state_pattern() {
 }
 
 pub fn state_pattern_rust() {
+    println!("==================== state_pattern_rust ====================");
     let mut post = RustPost::new();
 
     post.add_text("I ate a salad for lunch today");

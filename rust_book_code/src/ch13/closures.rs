@@ -38,6 +38,7 @@ impl Inventory {
 }
 
 pub fn closure_demo() {
+    println!("==================== closure_demo ====================");
     let store = Inventory {
         shirts: vec![ShirtColor::Blue, ShirtColor::Red, ShirtColor::Blue],
     };
@@ -58,6 +59,7 @@ pub fn closure_demo() {
 }
 
 pub(crate) fn closure_var() {
+    println!("==================== closure_var ====================");
     let expensive_closure = |num: u32| -> u32 {
         println!("calculating slowly...");
         thread::sleep(Duration::from_secs(2));
@@ -76,6 +78,7 @@ pub(crate) fn closure_var() {
 }
 
 pub fn closure_ownership() {
+    println!("==================== closure_ownership ====================");
     closure_borrow();
     closure_borrow_mut();
     closure_move_owner();
@@ -117,6 +120,7 @@ pub struct Rectangle {
     pub height: u32,
 }
 pub(crate) fn closure_fn() {
+    println!("==================== closure_fn ====================");
     let mut list = [
         Rectangle {
             width: 10,
@@ -156,6 +160,7 @@ pub(crate) fn closure_fn() {
 }
 
 pub fn closure() {
+    println!("==================== closure ====================");
     let simulated_user_specified_value = 10;
     let simulated_random_number = 7;
 
@@ -233,6 +238,7 @@ mod tests {
 }
 
 pub fn closure_scope() {
+    println!("==================== closure_scope ====================");
     let x = 4;
 
     let equal_to_x = |z| z == x;
@@ -243,6 +249,7 @@ pub fn closure_scope() {
 }
 
 pub fn closure_move() {
+    println!("==================== closure_move ====================");
     let x = vec![1, 2, 3];
 
     let equal_to_x = move |z| z == x;

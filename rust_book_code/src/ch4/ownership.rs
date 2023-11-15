@@ -1,4 +1,5 @@
 pub fn variable_scope() {
+    println!("==================== variable_scope ====================");
     {
         // s 在这里无效, 它尚未声明
         let s = "hello"; // 从此处起，s 是有效的
@@ -8,12 +9,14 @@ pub fn variable_scope() {
 }
 
 pub fn string_type() {
+    println!("==================== string_type ====================");
     let mut s = String::from("hello");
     s.push_str(", world!");
     println!("{}", s);
 } // 内存在拥有它的变量离开作用域后就被自动释放，调用一个特殊的函数 drop
 
 pub fn variable_move() {
+    println!("==================== variable_move ====================");
     // stack
     stack_copy();
 
@@ -44,6 +47,7 @@ fn stack_copy() {
 }
 
 pub fn ownership_func() {
+    println!("==================== ownership_func ====================");
     let s = String::from("hello"); // s 进入作用域
 
     takes_ownership(s); // s 的值移动到函数里 ...
@@ -70,6 +74,7 @@ fn makes_copy(some_integer: i32) {
 
 // 这里，some_integer 移出作用域。没有特殊之处
 pub fn ownership_return_back() {
+    println!("==================== ownership_return_back ====================");
     let s1 = gives_ownership(); // gives_ownership 将返回值
                                 // 转移给 s1
 
@@ -102,6 +107,7 @@ fn takes_and_gives_back(a_string: String) -> String {
 }
 
 pub fn ownership_return_multi_values() {
+    println!("==================== ownership_return_multi_values ====================");
     let s1 = String::from("hello");
 
     let (s2, len) = calculate_length(s1);

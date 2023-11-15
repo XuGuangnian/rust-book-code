@@ -1,4 +1,5 @@
 pub fn if_else() {
+    println!("==================== if_else ====================");
     let number = 3;
 
     if number < 5 {
@@ -13,6 +14,7 @@ pub fn if_else() {
 }
 
 fn if_expression() {
+    println!("==================== if_expression ====================");
     let condition = true;
     // if 的每个分支的可能的返回值都必须是相同类型
     let number = if condition { 5 } else { 6 };
@@ -20,6 +22,7 @@ fn if_expression() {
 }
 
 fn if_else_if() {
+    println!("==================== if_else_if ====================");
     let number = 6;
 
     if number % 4 == 0 {
@@ -34,6 +37,7 @@ fn if_else_if() {
 }
 
 pub fn loop_func() {
+    println!("==================== loop_func ====================");
     // 无限循环
     // loop {
     //     println!("again!");
@@ -53,6 +57,7 @@ pub fn loop_func() {
 }
 
 pub fn loop_label() {
+    println!("==================== loop_label ====================");
     let mut count = 0;
     'counting_up: loop {
         println!("count = {count}");
@@ -75,6 +80,7 @@ pub fn loop_label() {
 }
 
 pub fn while_func() {
+    println!("==================== while_func ====================");
     let mut number = 3;
     while number != 0 {
         println!("{number}!");
@@ -85,6 +91,7 @@ pub fn while_func() {
 }
 
 fn while_element() {
+    println!("==================== while_element ====================");
     let a = [10, 20, 30, 40, 50];
     let mut index = 0;
     while index < 5 {
@@ -94,6 +101,7 @@ fn while_element() {
 }
 
 pub fn for_element() {
+    println!("==================== for_element ====================");
     // while_element();
 
     let a = [10, 20, 30, 40, 50];

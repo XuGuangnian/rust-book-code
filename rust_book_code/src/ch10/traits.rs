@@ -3,6 +3,7 @@ use std::fmt::{Debug, Display};
 use rust_book_code::{NewsArticle, Summary, Tweet};
 
 pub fn aggregator() {
+    println!("==================== aggregator ====================");
     let tweet = Tweet {
         username: String::from("horse_ebooks"),
         content: String::from("of course, as you probably already know, people"),
@@ -27,6 +28,7 @@ pub fn aggregator() {
 }
 
 pub fn trait_parameter() {
+    println!("==================== trait_parameter ====================");
     let mut tweet = Tweet {
         username: "notify".to_string(),
         content: "Summary".to_string(),
@@ -89,6 +91,7 @@ pub fn trait_parameter() {
 }
 
 pub fn trait_return() {
+    println!("==================== trait_return ====================");
     fn returns_summarizable() -> impl Summary {
         Tweet {
             username: String::from("horse_ebooks"),
@@ -143,6 +146,7 @@ impl<T: Display + PartialOrd> Pair<T> {
 }
 
 pub fn trait_conditional() {
+    println!("==================== trait_conditional ====================");
     let pair = Pair::new(1, 2);
     pair.cmp_display();
 

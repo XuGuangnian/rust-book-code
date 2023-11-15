@@ -1,6 +1,7 @@
 use std::iter::Iterator;
 
 pub fn create() {
+    println!("==================== create ====================");
     let v1 = vec![1, 2, 3];
 
     let v1_iter = v1.iter(); // iter() get the reference of v1
@@ -16,6 +17,7 @@ pub fn create() {
 }
 
 pub fn adaptors() {
+    println!("==================== adaptors ====================");
     let v1 = vec![1, 2, 3];
 
     let v2: Vec<_> = v1.iter().map(|x| x + 1).collect();

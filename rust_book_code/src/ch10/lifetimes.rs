@@ -1,6 +1,7 @@
 use std::fmt::Display;
 
 pub fn lifetimes_syntax() {
+    println!("==================== lifetimes_syntax ====================");
     let string1 = String::from("abcd");
     let string2 = "xyz";
 
@@ -46,6 +47,7 @@ impl<'a> ImportantExcerpt<'a> {
 }
 
 pub fn lifetimes_struct() {
+    println!("==================== lifetimes_struct ====================");
     let novel = String::from("Call me Ishmael. Some years ago...");
     let first_sentence = novel.split('.').next().expect("Could not find a '.'");
     let i = ImportantExcerpt {
@@ -60,11 +62,13 @@ pub fn lifetimes_struct() {
 }
 
 pub fn lifetimes_static() {
+    println!("==================== lifetimes_static ====================");
     let s: &'static str = "I have a static lifetime.";
     println!("{}", s);
 }
 
 pub fn combination() {
+    println!("==================== combination ====================");
     fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str
     where
         T: Display,

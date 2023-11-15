@@ -20,6 +20,7 @@ fn first_word_no_slice(s: &String) -> usize {
 }
 
 pub fn slices() {
+    println!("==================== slices ====================");
     let s = String::from("hello world");
     let hello = &s[0..5];
     println!("hello: {}", hello);
@@ -48,6 +49,7 @@ pub fn slices() {
 }
 
 pub fn first_word_slice() {
+    println!("==================== first_word_slice ====================");
     let mut s = String::from("hello world");
     let word = first_word(&s); // word 的值为 5
 

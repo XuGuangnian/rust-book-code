@@ -1,6 +1,7 @@
 use std::io;
 
 pub fn integer() {
+    println!("==================== integer ====================");
     let x: i16 = 10;
     let y = 20;
     let z: isize = 30;
@@ -8,6 +9,7 @@ pub fn integer() {
 }
 
 pub fn float() {
+    println!("==================== float ====================");
     let x = 2.0; // f64
 
     let y: f32 = 3.0; // f32
@@ -15,6 +17,7 @@ pub fn float() {
 }
 
 pub fn calc() {
+    println!("==================== calc ====================");
     // addition
     let sum = 5 + 10;
     println!("The value of sum is {sum}");
@@ -40,6 +43,7 @@ pub fn calc() {
 }
 
 pub fn bool() {
+    println!("==================== bool ====================");
     let t = true;
 
     let f: bool = false; // with explicit type annotation
@@ -47,6 +51,7 @@ pub fn bool() {
 }
 
 pub fn char() {
+    println!("==================== char ====================");
     let c = 'z';
     let z: char = 'ℤ'; // with explicit type annotation
     let heart_eyed_cat = '😻';
@@ -54,6 +59,7 @@ pub fn char() {
 }
 
 pub fn tuple() {
+    println!("==================== tuple ====================");
     let tup: (i32, f64, u8) = (500, 6.4, 1);
     let (x, y, z) = tup;
     println!("The value of y is: {y}");
@@ -65,6 +71,7 @@ pub fn tuple() {
 }
 
 pub fn array() {
+    println!("==================== array ====================");
     let a = [1, 2, 3, 4, 5];
     let b: [i32; 5] = [1, 2, 3, 4, 5];
     let c = [3, 3, 3, 3, 3];

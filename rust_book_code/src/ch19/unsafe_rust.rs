@@ -1,6 +1,7 @@
 use std::slice;
 
 pub fn create_raw_pointers() {
+    println!("==================== create_raw_pointers ====================");
     // 通过引用创建裸指针
     let mut num = 5;
     let r1 = &num as *const i32;
@@ -17,6 +18,7 @@ pub fn create_raw_pointers() {
 }
 
 pub fn call_unsafe_fn() {
+    println!("==================== call_unsafe_fn ====================");
     unsafe fn dangerous() {}
 
     unsafe {
@@ -25,6 +27,7 @@ pub fn call_unsafe_fn() {
 }
 
 pub fn create_safe_abstraction() {
+    println!("==================== create_safe_abstraction ====================");
     let mut v = vec![1, 2, 3, 4, 5, 6];
 
     let r = &mut v[..];
@@ -76,6 +79,7 @@ fn add_to_count(inc: u32) {
     }
 }
 pub fn static_variable() {
+    println!("==================== static_variable ====================");
     add_to_count(3);
 
     unsafe {
@@ -84,6 +88,7 @@ pub fn static_variable() {
 }
 
 pub fn unsafe_trait() {
+    println!("==================== unsafe_trait ====================");
     unsafe trait Foo {
         // methods go here
     }
@@ -95,6 +100,7 @@ pub fn unsafe_trait() {
 
 /// 联合体的关键特性是联合体的所有字段共享同一段存储。因此，对联合体的一个字段的写操作会覆盖其他字段，而联合体的尺寸由其尺寸最大的字段的尺寸所决定。
 pub fn unions() {
+    println!("==================== unions ====================");
     #[repr(C)]
     union MyUnion {
         f1: u32,

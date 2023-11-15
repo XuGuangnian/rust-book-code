@@ -15,6 +15,7 @@ fn build_user(email: String, username: String) -> User {
 }
 
 pub fn struct_definition() {
+    println!("==================== struct_definition ====================");
     let mut user1 = User {
         email: String::from("someone@example.com"),
         username: String::from("someusername123"),
@@ -35,6 +36,11 @@ pub fn struct_definition() {
         sign_in_count: user1.sign_in_count,
     };
 
+    // let user3 = User {
+    //     email: String::from("another@example.com"),
+    //     ..user2
+    // };
+
     let user3 = User {
         email: String::from("another@example.com"),
         ..user2
@@ -46,6 +52,7 @@ struct Color(i32, i32, i32);
 struct Point(i32, i32, i32);
 
 pub fn tuple_structs() {
+    println!("==================== tuple_structs ====================");
     let black = Color(0, 0, 0);
     let origin = Point(0, 0, 0);
 }
@@ -53,6 +60,7 @@ pub fn tuple_structs() {
 struct AlwaysEqual;
 
 pub fn unit_like_struct() {
+    println!("==================== unit_like_struct ====================");
     let subject = AlwaysEqual;
 }
 
@@ -64,6 +72,7 @@ pub fn unit_like_struct() {
 // }
 
 pub fn struct_reference_no_lifetime() {
+    println!("==================== struct_reference_no_lifetime ====================");
     // let UserNoLifetime = UserNoLifetime {
     //     email: "someone@example.com",
     //     username: "someusername123",

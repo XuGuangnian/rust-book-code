@@ -1,4 +1,5 @@
 pub fn enum_definition() {
+    println!("==================== enum_definition ====================");
     {
         enum IpAddrKind {
             V4,
@@ -69,6 +70,7 @@ pub fn enum_definition() {
 }
 
 pub fn enum_and_struct() {
+    println!("==================== enum_and_struct ====================");
     #[derive(Debug)]
     enum Message {
         Quit,
@@ -97,6 +99,7 @@ pub fn enum_and_struct() {
 }
 
 pub fn enum_option() {
+    println!("==================== enum_option ====================");
     let some_number = Some(0);
     let some_char = Some('e');
 

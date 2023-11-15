@@ -1,4 +1,5 @@
 pub fn match_coin() {
+    println!("==================== match_coin ====================");
     enum Coin {
         Penny,
         Nickel,
@@ -20,6 +21,7 @@ pub fn match_coin() {
 }
 
 pub fn bind_values() {
+    println!("==================== bind_values ====================");
     #[derive(Debug)]
     enum UsState {
         Alabama,
@@ -53,6 +55,7 @@ pub fn bind_values() {
 }
 
 pub fn match_option() {
+    println!("==================== match_option ====================");
     fn plus_one(x: Option<i32>) -> Option<i32> {
         // Matches must be Exhaustive
         match x {
@@ -68,6 +71,7 @@ pub fn match_option() {
 }
 
 pub fn match_catch_all() {
+    println!("==================== match_catch_all ====================");
     let dice_roll = 9;
     match dice_roll {
         3 => add_fancy_hat(),

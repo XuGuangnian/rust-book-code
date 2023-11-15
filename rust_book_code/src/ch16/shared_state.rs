@@ -3,6 +3,7 @@ use std::sync::{Arc, Mutex};
 use std::thread;
 
 pub fn mutex() {
+    println!("==================== mutex ====================");
     let m = Mutex::new(5);
 
     {
@@ -14,6 +15,7 @@ pub fn mutex() {
 }
 
 pub fn shared_mutex() {
+    println!("==================== shared_mutex ====================");
     let counter = Arc::new(Mutex::new(0));
     let mut handles = vec![];
 

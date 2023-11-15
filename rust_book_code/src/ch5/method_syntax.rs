@@ -26,6 +26,7 @@ impl Rectangle {
 }
 
 pub fn impl_area() {
+    println!("==================== impl_area ====================");
     let rect1 = Rectangle {
         width: 30,
         height: 50,
@@ -42,6 +43,7 @@ pub fn impl_area() {
 }
 
 pub fn reference_and_dereference() {
+    println!("==================== reference_and_dereference ====================");
     #[derive(Debug, Copy, Clone)]
     struct Point {
         x: f64,
@@ -67,6 +69,7 @@ pub fn reference_and_dereference() {
 }
 
 pub fn can_hold() {
+    println!("==================== can_hold ====================");
     let rect1 = Rectangle {
         width: 30,
         height: 50,
@@ -85,6 +88,7 @@ pub fn can_hold() {
 }
 
 pub fn associated_functions() {
+    println!("==================== associated_functions ====================");
     let sq = Rectangle::square(3);
 }
 

@@ -1,4 +1,5 @@
 pub fn create() {
+    println!("==================== create ====================");
     let mut s = String::new();
     println!("{:?}", s);
 
@@ -26,6 +27,7 @@ pub fn create() {
 }
 
 pub fn update() {
+    println!("==================== update ====================");
     let mut s1 = String::from("foo");
     let s2 = "bar";
     s1.push_str(s2);
@@ -39,6 +41,7 @@ pub fn update() {
 
 // + : fn add(self, s: &str) -> String;
 pub fn combine_two_strings() {
+    println!("==================== combine_two_strings ====================");
     let s1 = String::from("Hello, ");
     let s2 = String::from("world!");
     let s3 = s1 + &s2; // s1 moved
@@ -47,6 +50,7 @@ pub fn combine_two_strings() {
 }
 
 pub fn combine_multiple_strings() {
+    println!("==================== combine_multiple_strings ====================");
     let s1 = String::from("tic");
     let s2 = String::from("tac");
     let s3 = String::from("toe");
@@ -62,6 +66,7 @@ pub fn combine_multiple_strings() {
 }
 
 pub fn not_indexed() {
+    println!("==================== not_indexed ====================");
     let s1 = String::from("hello");
     // let h = s1[0];
 
@@ -74,6 +79,7 @@ pub fn not_indexed() {
 }
 
 pub fn slice() {
+    println!("==================== slice ====================");
     let hello = "Здравствуйте";
     let s = &hello[0..4]; // yes
                           // let s = &hello[0]; // no
@@ -87,6 +93,7 @@ pub fn slice() {
 }
 
 pub fn iterate() {
+    println!("==================== iterate ====================");
     for c in "Зд".chars() {
         println!("{c}");
     }

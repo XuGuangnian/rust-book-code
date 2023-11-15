@@ -1,4 +1,5 @@
 pub fn rectangles() {
+    println!("==================== rectangles ====================");
     let width1 = 30;
     let height1 = 50;
 
@@ -13,6 +14,7 @@ fn area(width: u32, height: u32) -> u32 {
 }
 
 pub fn rectangles_with_tuple() {
+    println!("==================== rectangles_with_tuple ====================");
     let rect1 = (30, 50);
 
     println!(
@@ -32,6 +34,7 @@ struct Rectangle {
 }
 
 pub fn rectangles_with_struct() {
+    println!("==================== rectangles_with_struct ====================");
     let rect1 = Rectangle {
         width: 30,
         height: 50,
@@ -48,6 +51,7 @@ fn area_with_struct(rectangle: &Rectangle) -> u32 {
 }
 
 pub fn print_struct() {
+    println!("==================== print_struct ====================");
     let rect1 = Rectangle {
         width: 30,
         height: 50,
@@ -58,6 +62,7 @@ pub fn print_struct() {
 }
 
 pub fn dbg_macro() {
+    println!("==================== dbg_macro ====================");
     let scale = 2;
     let rect1 = Rectangle {
         width: dbg!(30 * scale),

@@ -2,6 +2,7 @@ use crate::ch15::smart_pointer::List::{Cons, Nil};
 use std::ops::Deref;
 
 pub fn heap_box() {
+    println!("==================== heap_box ====================");
     let b = Box::new(5);
     println!("b = {}", b);
 }
@@ -13,6 +14,7 @@ enum List {
 }
 
 pub fn cons_list() {
+    println!("==================== cons_list ====================");
     let list = Cons(1, Box::new(Cons(2, Box::new(Cons(3, Box::new(Nil))))));
     println!("cons_list: {:?}", list);
 }
@@ -42,6 +44,7 @@ fn hello_string(name: &String) {
 }
 
 pub fn deref_trait() {
+    println!("==================== deref_trait ====================");
     let x = 5;
     let y = MyBox::new(x);
     assert_eq!(5, x);
@@ -63,6 +66,7 @@ impl Drop for CustomSmartPointer {
 }
 
 pub fn drop_trait() {
+    println!("==================== drop_trait ====================");
     let c = CustomSmartPointer {
         data: String::from("my stuff"),
     };
@@ -73,6 +77,7 @@ pub fn drop_trait() {
 }
 
 pub fn std_mem_drop() {
+    println!("==================== std_mem_drop ====================");
     let c = CustomSmartPointer {
         data: String::from("some data"),
     };

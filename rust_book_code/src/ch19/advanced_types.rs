@@ -4,6 +4,7 @@ use std::cmp::Ordering;
 use std::io;
 
 pub fn type_alias() {
+    println!("==================== type_alias ====================");
     type Kilometers = i32;
 
     let x: i32 = 5;
@@ -56,6 +57,7 @@ pub fn never_type() {
 }
 
 pub fn dyn_sized_types() {
+    println!("==================== dyn_sized_types ====================");
     let s1 = "Hello there!";
     let s2 = "How's it going?";
     // 动态大小类型用法：必须将动态大小类型的值置于某种指针之后

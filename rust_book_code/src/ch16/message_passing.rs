@@ -3,6 +3,7 @@ use std::thread;
 use std::time::Duration;
 
 pub fn channel() {
+    println!("==================== channel ====================");
     // tx and rx are the abbreviations of transmitting and receiving a data unit
     let (tx, rx) = mpsc::channel();
 
@@ -17,6 +18,7 @@ pub fn channel() {
 }
 
 pub fn channel_waiting() {
+    println!("==================== channel_waiting ====================");
     let (tx, rx) = mpsc::channel();
 
     thread::spawn(move || {
@@ -39,6 +41,7 @@ pub fn channel_waiting() {
 }
 
 pub fn clone_channel() {
+    println!("==================== clone_channel ====================");
     let (tx, rx) = mpsc::channel();
 
     let tx1 = tx.clone();

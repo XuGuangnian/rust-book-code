@@ -1,4 +1,5 @@
 pub fn immut_variables() {
+    println!("==================== immut_variables ====================");
     let x = 5;
     println!("The value of x is: {x}");
     // cannot assign twice to immutable variable
@@ -7,6 +8,7 @@ pub fn immut_variables() {
 }
 
 pub fn mut_variables() {
+    println!("==================== mut_variables ====================");
     let mut x = 5;
     println!("The value of x is: {x}");
     x = 6;
@@ -14,13 +16,17 @@ pub fn mut_variables() {
 }
 
 pub fn constants() {
+    println!("==================== constants ====================");
     const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
     println!("The constant is {THREE_HOURS_IN_SECONDS}")
 }
 
 pub fn shadowing() {
+    println!("==================== shadowing ====================");
     let x = 5; // 被隐藏，内存中还存有值
+               // let x_ref = &x;
     let x = x + 1;
+    // println!("{}", *x_ref);
 
     {
         let x = x * 2;

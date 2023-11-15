@@ -1,4 +1,7 @@
+use std::process::id;
+
 pub fn match_literals() {
+    println!("==================== match_literals ====================");
     let x = 1;
 
     match x {
@@ -10,6 +13,7 @@ pub fn match_literals() {
 }
 
 pub fn match_named_variables() {
+    println!("==================== match_named_variables ====================");
     let x = Some(5);
     let y = 10;
 
@@ -23,6 +27,7 @@ pub fn match_named_variables() {
 }
 
 pub fn multiple_patterns() {
+    println!("==================== multiple_patterns ====================");
     let x = 1;
 
     match x {
@@ -36,6 +41,7 @@ pub fn multiple_patterns() {
 ///
 /// 范围只允许用于数字或 char 值
 pub fn match_range() {
+    println!("==================== match_range ====================");
     let x = 5;
 
     match x {
@@ -53,6 +59,7 @@ pub fn match_range() {
 }
 
 pub fn destructure_struct() {
+    println!("==================== destructure_struct ====================");
     #[derive(Debug)]
     struct Point {
         x: i32,
@@ -79,6 +86,7 @@ pub fn destructure_struct() {
 }
 
 pub fn destructure_enum() {
+    println!("====================  ====================");
     enum Message {
         Quit,
         Move { x: i32, y: i32 },
@@ -105,6 +113,7 @@ pub fn destructure_enum() {
 }
 
 pub fn destructure_nested_structs_enums_tuples() {
+    println!("====================  ====================");
     enum Color {
         Rgb(i32, i32, i32),
         Hsv(i32, i32, i32),
@@ -139,6 +148,7 @@ pub fn destructure_nested_structs_enums_tuples() {
 
 /// _
 pub fn ignore_values() {
+    println!("==================== ignore_values ====================");
     // 函数参数忽略
     fn foo(_: i32, y: i32) {
         println!("This code only uses the y parameter: {}", y);
@@ -179,6 +189,7 @@ pub fn ignore_values() {
 }
 
 pub fn ignore_values_with_range() {
+    println!("==================== ignore_values_with_range ====================");
     struct Point {
         x: i32,
         y: i32,
@@ -205,6 +216,7 @@ pub fn ignore_values_with_range() {
 }
 
 pub fn match_guard() {
+    println!("==================== match_guard ====================");
     let num = Some(4);
 
     match num {
@@ -223,6 +235,7 @@ pub fn match_guard() {
 }
 
 pub fn at_operator() {
+    println!("==================== at_operator ====================");
     enum Message {
         Hello { id: i32 },
     }

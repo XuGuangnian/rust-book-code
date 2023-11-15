@@ -7,6 +7,7 @@ fn do_twice(f: fn(i32) -> i32, arg: i32) -> i32 {
 }
 
 pub fn function_pointer() {
+    println!("==================== function_pointer ====================");
     let answer = do_twice(add_one, 5);
 
     println!("The answer is: {}", answer);
@@ -28,6 +29,7 @@ pub fn function_pointer() {
 }
 
 pub fn return_closures() {
+    println!("==================== return_closures ====================");
     fn returns_closure() -> Box<dyn Fn(i32) -> i32> {
         Box::new(|x| x + 1)
     }

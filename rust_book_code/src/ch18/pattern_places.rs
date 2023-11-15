@@ -1,4 +1,5 @@
 pub fn match_pattern() {
+    println!("==================== match_pattern ====================");
     fn plus_one(x: Option<i32>) -> Option<i32> {
         match x {
             None => None,
@@ -12,6 +13,7 @@ pub fn match_pattern() {
 }
 
 pub(crate) fn if_let_pattern() {
+    println!("==================== if_let_pattern ====================");
     let favorite_color: Option<&str> = None;
     let is_tuesday = false;
     let age: Result<u8, _> = "34".parse();
@@ -32,6 +34,7 @@ pub(crate) fn if_let_pattern() {
 }
 
 pub fn while_let_pattern() {
+    println!("==================== while_let_pattern ====================");
     let mut stack = Vec::new();
 
     stack.push(1);
@@ -44,6 +47,7 @@ pub fn while_let_pattern() {
 }
 
 pub fn for_pattern() {
+    println!("==================== for_pattern ====================");
     let v = vec!['a', 'b', 'c'];
 
     for (index, value) in v.iter().enumerate() {
@@ -52,6 +56,7 @@ pub fn for_pattern() {
 }
 
 pub fn let_pattern() {
+    println!("==================== let_pattern ====================");
     let (x, y, z) = (1, 2, 3);
     // let (x, y) = (1, 2, 3); // 错误
     let (x, y, _) = (1, 2, 3);
@@ -59,6 +64,7 @@ pub fn let_pattern() {
 }
 
 pub fn fn_pattern() {
+    println!("==================== fn_pattern ====================");
     fn print_coordinates(&(x, y): &(i32, i32)) {
         println!("Current location: ({}, {})", x, y);
     }

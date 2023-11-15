@@ -12,6 +12,7 @@ macro_rules! vec_def {
 }
 
 pub fn macro_rules() {
+    println!("==================== macro_rules ====================");
     let v: Vec<u32> = vec![1, 2, 3];
     let v_def: Vec<u32> = vec_def![1, 2, 3];
     println!("{:?}", v);
@@ -28,6 +29,7 @@ pub fn proc_macro_custom_derive() {
     Pancakes::hello_macro();
 }
 pub fn proc_macro_attribute_like() {
+    println!("==================== proc_macro_attribute_like ====================");
     // #[route(GET, "/")]
     // fn index() {}
 
@@ -35,6 +37,7 @@ pub fn proc_macro_attribute_like() {
     // pub fn route(attr: TokenStream, item: TokenStream) -> TokenStream {}
 }
 pub fn proc_macro_function_like() {
+    println!("==================== proc_macro_function_like ====================");
     // let sql = sql!(SELECT * FROM posts WHERE id=1);
 
     // #[proc_macro]
