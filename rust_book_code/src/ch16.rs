@@ -17,5 +17,6 @@ pub fn message_passing() {
 pub fn concurrency() {
     shared_state::mutex();
     shared_state::shared_mutex();
+    shared_state::shared_mutex_struct();
     // todo: write a deadlocks by Mutex<T>/Arc<T>
 }

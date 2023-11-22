@@ -1,5 +1,5 @@
 use std::rc::Rc;
-use std::sync::{Arc, Mutex};
+use std::sync::{Arc, Mutex, MutexGuard};
 use std::thread;
 
 pub fn mutex() {
@@ -34,4 +34,32 @@ pub fn shared_mutex() {
     }
 
     println!("Result: {}", *counter.lock().unwrap());
+}
+
+#[derive(Default, Debug)]
+struct SshState {
+    batch: bool,
+    terminated: bool,
+}
+
+pub fn shared_mutex_struct() {
+    println!("==================== shared_mutex_struct ====================");
+    let ssh_state = Arc::new(Mutex::new(SshState::default()));
+    let mut handles = vec![];
+
+    for _ in 0..10 {
+        let counter = Arc::clone(&ssh_state);
+        let handle = thread::spawn(move || {
+            let mut state = counter.lock().unwrap();
+
+            state.terminated = true;
+        });
+        handles.push(handle);
+    }
+
+    for handle in handles {
+        handle.join().unwrap();
+    }
+
+    println!("Result: {:?}", *ssh_state.lock().unwrap());
 }
