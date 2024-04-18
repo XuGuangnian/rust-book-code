@@ -82,13 +82,14 @@ pub fn slice() {
     println!("==================== slice ====================");
     let hello = "Здравствуйте";
     let s = &hello[0..4]; // yes
-                          // let s = &hello[0]; // no
-                          // let s = &hello[0..1]; // no
+    // let s = &hello[0]; // no
+    // let s = &hello[0..1]; // no
+    println!("{}", s);
 
     let hello = "你好";
     let s = &hello[0..3]; // yes
-                          // let s = &hello[0]; // no
-                          // let s = &hello[0..2]; // no
+    // let s = &hello[0]; // no
+    // let s = &hello[0..2]; // no
     println!("{}", s);
 }
 

@@ -3,6 +3,7 @@ use std::collections::HashMap;
 // pub, pub(crate)的区别: https://cheats.rs/#organizing-code
 // pub "Public if parent path is public" visibility for T.
 // pub(crate) Visible at most in current crate.
+#[allow(clippy::useless_vec)]
 pub fn create() {
     println!("==================== create ====================");
     let mut scores = HashMap::new();

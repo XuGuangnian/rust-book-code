@@ -1,3 +1,4 @@
+#[allow(clippy::single_match)]
 pub fn match_one_pattern() {
     println!("==================== match_one_pattern ====================");
     let config_max = Some(3u8);

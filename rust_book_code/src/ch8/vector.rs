@@ -4,6 +4,7 @@ pub fn create() {
     println!("{:?}", v);
 }
 
+#[allow(clippy::vec_init_then_push)]
 pub fn update() {
     println!("==================== update ====================");
     let mut v = Vec::new();
@@ -26,6 +27,7 @@ pub fn drop() {
     // println!("{:?}", v);
 }
 
+#[allow(clippy::useless_vec)]
 pub fn read_element() {
     println!("==================== read_element ====================");
     let v = vec![1, 2, 3, 4, 5];
@@ -43,6 +45,7 @@ pub fn read_element() {
 // Vector 的工作方式：在 vector 的结尾添加新元素时，在没有足够空间的情况下，
 // 它会创建一个新的 vector，并将旧 vector 的元素复制到新 vector 中。
 // 这时，第一个元素的引用就指向的被释放的内存。这是不被允许的。
+#[allow(clippy::useless_vec)]
 pub fn vector_work_type() {
     println!("==================== vector_work_type ====================");
     let mut v = vec![1, 2, 3, 4, 5];
@@ -61,6 +64,7 @@ pub fn iterate() {
     for i in &v {
         println!("{}", i);
     }
+    println!("{:?}", v);
 
     for i in v {
         // - `v` moved due to this implicit call to `.into_iter()`

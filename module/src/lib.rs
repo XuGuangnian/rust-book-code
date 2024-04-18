@@ -1,4 +1,5 @@
 pub use crate::front_of_house::hosting;
+
 pub mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {}
@@ -22,7 +23,7 @@ pub fn eat_at_restaurant() {
     // meal.seasonal_fruit = String::from("blueberries");
 
     println!("{:?}", back_of_house::Appetizer::Soup);
-    println!("{:?}", back_of_house::Appetizer::Salad)
+    println!("{:?}", back_of_house::Appetizer::Salad);
 }
 
 fn deliver_order() {

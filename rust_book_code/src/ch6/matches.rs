@@ -56,12 +56,15 @@ pub fn bind_values() {
 
 pub fn match_option() {
     println!("==================== match_option ====================");
+    #[allow(clippy::manual_map)]
     fn plus_one(x: Option<i32>) -> Option<i32> {
         // Matches must be Exhaustive
         match x {
             None => None,
             Some(i) => Some(i + 1),
         }
+        // clippy::manual_map
+        // x.map(|i| i + 1)
     }
 
     let five = Some(5);

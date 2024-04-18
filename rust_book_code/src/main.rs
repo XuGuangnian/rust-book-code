@@ -31,14 +31,14 @@ fn main() {
     // ch10();
     // ch11();
     // ch12();
-    // ch13();
+    ch13();
     // ch14: https://doc.rust-lang.org/cargo/
     // ch15();
     // ch16();
     // ch17();
     // ch18();
-    ch19();
-    ch20();
+    // ch19();
+    // ch20();
 }
 
 pub fn ch1() {
@@ -100,7 +100,7 @@ pub fn ch10() {
 }
 
 fn ch11() {
-    // in lib.rs
+    // in ch11.rs
     // #[cfg(test)]
     // mod tests {}
 }

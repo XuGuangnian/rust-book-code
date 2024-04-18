@@ -66,7 +66,7 @@ pub fn three() {
     let mut department_map: HashMap<&str, Vec<&str>> = HashMap::new();
     department_map
         .entry(department)
-        .or_insert(vec![])
+        .or_default()
         .push(employee);
     println!("{:?}", department_map);
 
